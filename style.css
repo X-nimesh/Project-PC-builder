@@ -144,7 +144,9 @@
     border: none;
 } */
 
-
+.loginF{
+    width: 50%;
+}
 
 .btn-grad {
     background-image: radial-gradient(circle, rgba(136,0,255,1) 0%, rgba(0,211,255,1) 94%);
