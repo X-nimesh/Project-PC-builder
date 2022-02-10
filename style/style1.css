@@ -98,9 +98,12 @@
   -webkit-transition: .2s;
   transition: .2s;
   cursor: pointer;
+  transition: transform .2s;
+
 }
 .nav-link:hover{
-  transition: transform .2s;
+  /* transition: transform .2s; */
+  transform: scale(1.2);
 }
 .nav-link a {
   text-decoration: none;
@@ -113,7 +116,7 @@
   /* box-shadow: #2fceff70 0px 0px 39px 0px; */
   /* border-radius: 25px;  */
   color: aqua;
-  transition: transform .2s;
+
 
 }
 
@@ -149,7 +152,7 @@
 
 .loginB:hover {
   background-color: #2243b9;
-  /* transform: scale(1.1); */
+  transform: scale(1.1);
   /* box-shadow: #2f71ff70 0px 0px 39px 0px;  */
 }
 
