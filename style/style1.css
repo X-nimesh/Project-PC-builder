@@ -99,7 +99,9 @@
   transition: .2s;
   cursor: pointer;
 }
-
+.nav-link:hover{
+  transition: transform .2s;
+}
 .nav-link a {
   text-decoration: none;
   color: aliceblue;
@@ -111,6 +113,8 @@
   /* box-shadow: #2fceff70 0px 0px 39px 0px; */
   /* border-radius: 25px;  */
   color: aqua;
+  transition: transform .2s;
+
 }
 
 .loginB {
