@@ -17,11 +17,11 @@
                 
 
                     <ul class="nav-bar">
-                        <li class="nav-link"><a href="/index.html">Home</a></li>
-                        <li class="nav-link"><a href="/pcbuilder.html">PC Builder</a></li>
-                        <li class="nav-link"><a href="/shop.html">Shop</a></li>
-                        <li class="nav-link"><a href="/contact.html">Contact</a></li>
-                        <li><div class="loginB"><a href="/LoginPage.html">Login</a></div></li>
+                        <li class="nav-link"><a href="index.html">Home</a></li>
+                        <li class="nav-link"><a href="pcbuilder.html">PC Builder</a></li>
+                        <li class="nav-link"><a href="shop.html">Shop</a></li>
+                        <li class="nav-link"><a href="contact.html">Contact</a></li>
+                        <li><div class="loginB"><a href="LoginPage.html">Login</a></div></li>
                     </ul>
 
                   

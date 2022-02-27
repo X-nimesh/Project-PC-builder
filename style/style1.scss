@@ -55,10 +55,14 @@ $btncolor: #2952e3;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 10px;
+}
+.logom {
+  // width: 10px;
 }
 
 .logo {
-  width: 35%;
+  width: 150px;
   /* height: 60px; */
   /* background-color: rgb(241, 253, 76); */
   font-size: 50px;
@@ -86,6 +90,7 @@ $btncolor: #2952e3;
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
   width: 100%;
+  margin-right: -10px;
 }
 .nav-bar {
   display: -webkit-box;
@@ -97,7 +102,9 @@ $btncolor: #2952e3;
   -webkit-box-pack: space-evenly;
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
-  width: 50%;
+  width: fit-content;
+  padding: 5px;
+  min-width: 50%;
 }
 
 .nav-link {
@@ -157,6 +164,7 @@ $btncolor: #2952e3;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-left: 20px;
 }
 
 .loginB a {
@@ -182,6 +190,7 @@ $btncolor: #2952e3;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  // align-items: center;
 }
 
 .login {
@@ -431,5 +440,19 @@ $btncolor: #2952e3;
   // margin: 0 auto;
   margin-left: 40vw;
   text-align: center;
+}
+.userbox {
+  width: 40vw;
+  background-color: rgba(0, 0, 0, 0.178);
+  height: fit-content;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto;
+  border-radius: 20px;
+  .details p {
+    margin: 25px 0px;
+  }
 }
 /*# sourceMappingURL=style1.css.map */
