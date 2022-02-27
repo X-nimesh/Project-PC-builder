@@ -2,7 +2,7 @@
   margin: 0px;
   padding: 0px;
   font-family: Segoe UI;
-  color: aliceblue;
+  color: #b6dfff;
 }
 
 .bg1 {
@@ -58,7 +58,7 @@
   /* background-color: rgb(241, 253, 76); */
   font-size: 50px;
   font-weight: bold;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin-left: 10px;
   line-height: 50px;
   color: aliceblue;
@@ -95,13 +95,13 @@
   font-size: 18px;
   line-height: 60px;
   color: aliceblue;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   cursor: pointer;
-  -webkit-transition: -webkit-transform .2s;
-  transition: -webkit-transform .2s;
-  transition: transform .2s;
-  transition: transform .2s, -webkit-transform .2s;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 .nav-link:hover {
@@ -132,8 +132,8 @@
   border-radius: 20px;
   /* height: 3rem; */
   list-style-type: none;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   margin-right: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -220,13 +220,19 @@
   color: #b0c3ff;
 }
 
+.loginF p {
+  margin-top: 20px;
+  text-align: center;
+}
+
 .loginF h1 {
   margin-bottom: 30px;
 }
 
-.loginF input[type=text] {
-  width: 100%;
+.loginF input[type="text"] {
+  width: 95%;
   height: 40px;
+  padding: 0px 0px 0px 20px;
   border-radius: 10px;
   margin-top: 10px;
   margin-bottom: 5px;
@@ -234,7 +240,7 @@
   border: none;
 }
 
-.loginF input[type=password] {
+.loginF input[type="password"] {
   width: 100%;
   height: 40px;
   border-radius: 10px;
@@ -249,9 +255,98 @@
   margin-top: 5px;
 }
 
+.loginF {
+  /* border:white solid 2px; */
+}
+
+/* input[type=button]{
+      color: #ffffff;
+      background-color: radial-gradient(circle, rgba(136,0,255,1) 0%, rgba(0,211,255,1) 94%);
+      width: 100%;
+      height: 40px;
+      
+      border-radius: 5px;
+      border: none;
+  } */
+.signupF {
+  width: 40%;
+  background-color: #00000054;
+  padding: 30px 30px;
+  border-radius: 20px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-bottom: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #b0c3ff;
+}
+
+.signupF h1 {
+  margin-bottom: 30px;
+}
+
+.signupF input[type="text"] {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  background-color: rgba(63, 55, 127, 0.377);
+  border: none;
+}
+
+.signupF input[type="password"] {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  margin-top: 10px;
+  background-color: rgba(63, 55, 127, 0.349);
+  border: none;
+}
+
+.signupF label {
+  color: #7494ff;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.signupF p {
+  text-align: center;
+  color: #9fecff;
+  margin-top: 20px;
+  margin-top: 30px;
+}
+
+.signupF p a {
+  background-color: #2952e3;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  margin-left: 10px;
+}
+
+.signupF p a:hover {
+  background-color: #4a6ce6;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
 .btn-grad {
   background-image: radial-gradient(circle, #8800ff 0%, #00d3ff 94%);
-  padding: 10px 0px;
+  padding: 10px 10px;
   text-align: center;
   text-transform: uppercase;
   -webkit-transition: 0.5s;
