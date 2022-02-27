@@ -31,7 +31,7 @@
 
         <div class="login">
             <div class="containermain">
-                <form class="loginF" action="loginBack.php" method="post">
+                <form class="loginF" action="server/loginBack.php" method="post">
                     <h1>Here you can login</h1>
                     <label for="email">E-mail</label><br>
                     <input type="text" name="email" title="email">

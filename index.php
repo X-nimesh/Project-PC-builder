@@ -1,38 +1,7 @@
 <?php
-include 'header.php';
-if(!empty($_GET)){
+    session_start();
 
-    if(!empty($_GET['success'])){
-        ?>
-        <div class="successh" role="alert">
-        Registered Successfully
-        </div>
-    <?php
-    }
-    if(!empty($_GET['error'])){
-        ?>
-        <div class="errorh" role="alert">
-        Login credential is wrong
-        </div>
-    <?php
-    }
-    if(!empty($_GET['failed'])){
-        ?>
-        <div class="failh" role="alert">
-        Please login in
-        </div>
-    <?php
-    }
-    if(!empty($_GET['lout'])){
-        ?>
-        <div class="logouth" role="alert">
-        Logged Out Successfully
-        </div>
-    <?php
-    }
-}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,31 +12,79 @@ if(!empty($_GET)){
     <link rel="stylesheet" href="style/style1.css">
 </head>
 <body>
+
+
     <div class="bg1">
+
+<?php
+    if(!empty($_GET)){
+        echo "<div id='top-msg'  class='top-msg'>";
+        if(!empty($_GET['success'])){
+            ?>
+            <div class="successh" role="alert">
+            Registered Successfully
+            </div>
+        <?php
+        }
+        if(!empty($_GET['error'])){
+            ?>
+            <div class="errorh" role="alert">
+            Login credential is wrong
+            </div>
+        <?php
+        }
+        if(!empty($_GET['failed'])){
+            ?>
+            <div class="failh" role="alert">
+            Please login in
+            </div>
+        <?php
+        }
+        if(!empty($_GET['lout'])){
+            ?>
+            <div class="logouth" role="alert">
+            Logged Out Successfully
+            </div>
+        <?php
+        }
+        echo "</div>";
+    }
+?>
+
         <header class="header">
             <div class="container">
                 <div class="logom">
                     <a href="/index.html"><img src="img/edge tech.png" alt="logo" class="logo"></a>
-                   
                 </div>
-               
-
-                    <ul class="nav-bar">
-                        <li class="nav-link"><a href="/index.php">Home</a></li>
-                        <li class="nav-link"><a href="/pcbuilder.php">PC Builder</a></li>
-                        <li class="nav-link"><a href="/shop.php">Shop</a></li>
-                        <li class="nav-link"><a href="/contact.php">Contact</a></li>
-                        <li><div class="loginB"><a href="LoginPage.php">Login</a></div></li>
+                    <ul  class="nav-bar">
+                        <div id='nav' class="nav-barIn">
+                            <li class="nav-link"><a href="/index.php">Home</a></li>
+                            <li class="nav-link"><a href="/pcbuilder.php">PC Builder</a></li>
+                            <li class="nav-link"><a href="/shop.php">Shop</a></li>
+                            <li class="nav-link"><a href="/contact.php">Contact</a></li>
+                        </div>
+                        <li><div id="btn-main" class="loginB"><a href="LoginPage.php" id="btntxt">Login</a></div></li>
                     </ul>
-
-                
-                
             </div>
         </header>
     </div>
 
 
 
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
+    <script >
+        // let logged_in='<?php echo $_SESSION['uname']; ?>';
+        // console.log(logged_in);
+        let profile=document.getElementById('nav');
+        console.log(<?php echo isset($_SESSION['uname'])?>);
+        if(<?php echo isset($_SESSION['uname']);?>){
+                document.getElementById('btntxt').innerText = "Log Out";
+                document.getElementById('btntxt').href="server/logOut.php";
+                document.getElementById('nav').innerHTML += " <li class='nav-link'><a href='/profile.php'>Profile</a></li>";
+            
+
+               document.getElementById('btn-main').style.backgroundColor = "red";
+        }
+    </script>
 </body>
 </html>

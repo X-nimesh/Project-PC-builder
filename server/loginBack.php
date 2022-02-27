@@ -22,8 +22,8 @@ if(mysqli_num_rows($res)==1){
         
     }   
     $_SESSION['logged_in']=1;
-    echo "welcome $_SESSION[uname] ";
-    // header('location:index.php?success=true');//redirect to form' 
+    // echo "welcome $_SESSION[uname] ";
+    header('location:../index.php?success=true');//redirect to form' 
 }
 else{
     die("unable to login".mysqli_error($conn));
