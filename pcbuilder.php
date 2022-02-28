@@ -48,6 +48,7 @@
                                     <option value="Intel">Intel</option>
                                     <option value="AMD">AMD</option>
                                 </select>
+
                                 
                                 <select name="model" id="model">
                                     <option value="" selected disabled hidden>Model</option>
@@ -77,6 +78,7 @@
                 <img src="img/PC.png" alt="">
             </div>
         </form>
+       
 
     </div>
 
