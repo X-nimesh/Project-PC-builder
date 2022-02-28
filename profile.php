@@ -24,9 +24,9 @@
                     <ul  class="nav-bar">
                         <div id='nav' class="nav-barIn">
                             <li class="nav-link"><a href="index.php">Home</a></li>
-                            <li class="nav-link"><a href="/pcbuilder.php">PC Builder</a></li>
-                            <li class="nav-link"><a href="/shop.php">Shop</a></li>
-                            <li class="nav-link"><a href="/contact.php">Contact</a></li>
+                            <li class="nav-link"><a href="pcbuilder.php">PC Builder</a></li>
+                            <li class="nav-link"><a href="shop.php">Shop</a></li>
+                            <li class="nav-link"><a href="contact.php">Contact</a></li>
                         </div>
                         <li><div id="btn-main" class="loginB"><a href="LoginPage.php" id="btntxt">Login</a></div></li>
                     </ul>

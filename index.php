@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="style/style1.css">
+    <link rel="icon" href="img/edge tech.png" type="image/png">
 </head>
 <body>
 
