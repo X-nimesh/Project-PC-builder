@@ -68,8 +68,17 @@
                     </ul>
             </div>
         </header>
-    </div>
 
+        <div class="row">
+            <div class="column"> 
+                <img src="img/1.jpg" alt="" style="width:100%">
+                <img src="img/4.jpg" alt="" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="img/2.jpg" alt="" style="width:100%">
+                <img src="img/3.jpg" alt="" style="width:100%">
+            </div>
+        </div>
 
     <script src="script.js"></script>
     <script >

@@ -546,3 +546,23 @@ $btncolor: #2952e3;
   }
 }
 // *# sourceMappingURL=style1.css.map */
+
+.row{
+  margin: 30px;
+  margin-left: 90px;
+}
+
+.column{
+  margin: 0 0 0 10px;
+  display: block;
+  float: left;
+  padding: 5px;
+  width: 44%;
+} 
+
+.column img{
+  width: 100%;
+  height: auto;
+  margin: 5px;
+}
+
