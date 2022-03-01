@@ -496,6 +496,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 60px;
+  margin-bottom: 20px;
 }
 
 .body .PcContainer .core .compo {
@@ -539,7 +540,7 @@ body {
   margin-left: 65vw;
   position: -webkit-sticky;
   position: fixed;
-  top: 175px;
+  top: 125px;
 }
 
 .body .pc img {
@@ -586,7 +587,7 @@ img {
   width: 100%;
   position: relative;
   margin: auto;
-  height: 80vh;
+  height: 90vh;
   overflow: hidden;
   border-radius: 20px;
 }
@@ -729,12 +730,60 @@ img {
   border-radius: 20px;
 }
 
-.pcbuilderH {
-  height: 1000px;
+.homeconatinerPc {
+  margin-top: 20px;
+  position: relative;
+  text-align: center;
+  color: white;
 }
 
-.pcbuilderH img {
-  width: 98.5vw;
+.homeconatinerPc .img {
+  height: 600px;
+  overflow: hidden;
+}
+
+.homeconatinerPc .img img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.homeconatinerPc .contentOP {
+  z-index: 2;
+  position: absolute;
+  top: 3em;
+  left: 4em;
+  text-align: left;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.homeconatinerPc .contentOP h1 {
+  font-size: 65px;
+}
+
+.homeconatinerPc .contentOP p {
+  font-size: 25px;
+}
+
+.homeconatinerPc .contentOP .btn_builder button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #1b1927;
+  border: 2px solid magenta;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.homeconatinerPc .contentOP .btn_builder button:hover {
+  background-color: rgba(255, 0, 255, 0.39);
+  -webkit-box-shadow: 4px 4px 20px rgba(255, 0, 0, 0.37);
+          box-shadow: 4px 4px 20px rgba(255, 0, 0, 0.37);
+}
+
+.homeconatinerPc .contentOP .btn_builder button:active {
+  -webkit-box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.37);
+          box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.37);
 }
 
 .userbox {

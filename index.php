@@ -94,14 +94,28 @@
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
                 </div>
-                <br>
+
 
                 <!-- <div style="text-align:center">
                 <span class="dot" onclick="currentSlide(1)"></span> 
                 <span class="dot" onclick="currentSlide(2)"></span> 
                 <span class="dot" onclick="currentSlide(3)"></span> 
                 </div> -->
+            </div>
+            <div class="homeconatinerPc">
+                <div class="img">
+                    <img src="img/pc_img/pc.jpg" alt="">
+                </div>
 
+                <div class="contentOP">
+                    <h1>Pc Builder</h1>
+                    <p> Build Your Own PC</p>
+                    <p>Build what you need</p>
+                    <a class="btn_builder" href="pcbuilder.php">
+                        <button>Build Now</button>
+                    </a>
+                </div>
+            </div>
 
             <div class="row">
                 <div class="column"> 
@@ -118,9 +132,7 @@
                             
           
         </div>
-    <div class="pcbuilderH">
-        <img src="img/pc_img/3.jpg" alt="">
-    </div>
+   
     <script src="script.js"></script>
      <script>
         var slideIndex = 1;

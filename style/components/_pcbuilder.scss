@@ -34,6 +34,7 @@
       .inside {
         display: flex;
         gap: 60px;
+        margin-bottom: 20px;
       }
 
       .compo {
@@ -74,13 +75,14 @@
       // }
     }
   }
+
   .pc {
     // padding-right: 50px;
     margin-left: 65vw;
     // margin-bottom: 50px;
     position: -webkit-sticky;
     position: fixed;
-    top: 175px;
+    top: 125px;
 
     img {
       width: 350px;

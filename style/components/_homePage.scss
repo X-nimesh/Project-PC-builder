@@ -26,7 +26,7 @@ img {
   width: 100%;
   position: relative;
   margin: auto;
-  height: 80vh;
+  height: 90vh;
   overflow: hidden;
   border-radius: 20px;
 }
@@ -171,11 +171,54 @@ img {
   border: solid rgba(0, 255, 255, 0.185);
   border-radius: 20px;
 }
-.pcbuilderH {
-  height: 1000px;
-  img {
-    width: 98.5vw;
+.homeconatinerPc {
+  margin-top: 20px;
+  position: relative;
+  text-align: center;
+  color: white;
+  // width: 95vw;
+  .img {
+    height: 600px;
+    overflow: hidden;
+  }
+  .img img {
+    width: 100%;
+    border-radius: 20px;
   }
   &:hover {
+  }
+  .contentOP {
+    z-index: 2;
+    position: absolute;
+    top: 3em;
+    left: 4em;
+    text-align: left;
+    // background-color: #00000086;
+    padding: 20px;
+    border-radius: 20px;
+    h1 {
+      font-size: 65px;
+    }
+    p {
+      font-size: 25px;
+    }
+    .btn_builder {
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #1b1927;
+        border: 2px solid rgb(255, 0, 255);
+        border-radius: 20px;
+        font-size: 20px;
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(255, 0, 255, 0.39);
+          box-shadow: 4px 4px 20px rgba(255, 0, 0, 0.37);
+        }
+        &:active {
+          box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.37);
+        }
+      }
+    }
   }
 }

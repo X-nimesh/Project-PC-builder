@@ -72,6 +72,74 @@
                             </div>
                         </div>
                     </div>
+
+
+                    <div class="inside">
+                        <div class="compo">
+                            <p>Ram</p>
+                            <div class="option">
+                                <select name="company" id="company" >
+                                    <option value="" selected disabled hidden>Company</option>
+                                    <option value="Intel">Intel</option>
+                                </select>
+                                
+                                <select name="model" id="model">
+                                    <option value="" selected disabled hidden>Model</option>
+                                    <option value="i9900k">Intel i9-9900k</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="compo">
+                            <p>Ram</p>
+                            <div class="option">
+                                <select name="company" id="company" >
+                                    <option value="" selected disabled hidden>Company</option>
+                                    <option value="Intel">Intel</option>
+                                </select>
+                                
+                                <select name="model" id="model">
+                                    <option value="" selected disabled hidden>Model</option>
+                                    <option value="i9900k">Intel i9-9900k</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="inside">
+                        <div class="compo">
+                            <p>Ram</p>
+                            <div class="option">
+                                <select name="company" id="company" >
+                                    <option value="" selected disabled hidden>Company</option>
+                                    <option value="Intel">Intel</option>
+                                </select>
+                                
+                                <select name="model" id="model">
+                                    <option value="" selected disabled hidden>Model</option>
+                                    <option value="i9900k">Intel i9-9900k</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="compo">
+                            <p>Ram</p>
+                            <div class="option">
+                                <select name="company" id="company" >
+                                    <option value="" selected disabled hidden>Company</option>
+                                    <option value="Intel">Intel</option>
+                                </select>
+                                
+                                <select name="model" id="model">
+                                    <option value="" selected disabled hidden>Model</option>
+                                    <option value="i9900k">Intel i9-9900k</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
             <div class="pc">
@@ -95,7 +163,7 @@
                 document.getElementById('btntxt').innerText = "Log Out";
                 document.getElementById('btntxt').href="server/logOut.php";
                 // document.getElementById('nav').innerHTML += " <li class='nav-link'><a href='/profile.php'>Profile</a></li>";
-                document.getElementById('nav').innerHTML += " <li class='nav-link'><a href='profile.php'><img src='img/account.png' style='margin-top:12px;' width=35px alt='acc'></a></li>";
+                document.getElementById('nav').innerHTML += " <li class='nav-link'><a href='profile.php'><img src='img/account.png' class='profileicon' width=35px alt='acc'></a></li>";
             
 
                document.getElementById('btn-main').style.backgroundColor = "red";
