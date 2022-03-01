@@ -68,19 +68,85 @@
                     </ul>
             </div>
         </header>
+        <div class="mainH">
 
-        <div class="row">
-            <div class="column"> 
-                <img src="img/1.jpg" alt="" style="width:100%">
-                <img src="img/4.jpg" alt="" style="width:100%">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                <!-- <div class="numbertext">1 / 3</div> -->
+                <img src="img/pc_img/carossel/1.jpg" style="width:100%">
+                <!-- <div class="text">Best Pc</div> -->
+                </div>
+
+                <div class="mySlides fade">
+                <!-- <div class="numbertext">2 / 3</div> -->
+                <img src="img/pc_img/carossel/2.jpg" style="width:100%">
+                <!-- <div class="text">Caption Two</div> -->
+                </div>
+
+                <div class="mySlides fade">
+                <!-- <div class="numbertext">3 / 3</div> -->
+                <img src="img/pc_img/3.jpg" style="width:100%">
+                <!-- <div class="text">Caption Three</div> -->
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                </div>
+                <br>
+
+                <!-- <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                </div> -->
+
+
+            <div class="row">
+                <div class="column"> 
+                    <img src="img/pc_img/1.jpg" alt="" style="width:100%">
+                    <img src="img/pc_img/4.jpg" alt="" style="width:100%">
+                    <img src="img/pc_img/6.jpg" alt="" style="width:100%">
+                </div>
+                <div class="columnR">
+                    <img src="img/pc_img/3.jpg" alt="" style="width:100%">
+                    <img src="img/pc_img/2.jpg" alt="" style="width:100%">
+                    <img src="img/pc_img/5.jpg" alt="" style="width:100%">
+                </div>
             </div>
-            <div class="column">
-                <img src="img/2.jpg" alt="" style="width:100%">
-                <img src="img/3.jpg" alt="" style="width:100%">
-            </div>
+                            
+          
         </div>
-
+    <div class="pcbuilderH">
+        <img src="img/pc_img/3.jpg" alt="">
+    </div>
     <script src="script.js"></script>
+     <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        }
+    </script>
     <script >
         // let logged_in='<?php echo $_SESSION['uname']; ?>';
         // console.log(logged_in);
@@ -95,6 +161,8 @@
 
                document.getElementById('btn-main').style.backgroundColor = "red";
         }
+        
     </script>
+    
 </body>
 </html>
