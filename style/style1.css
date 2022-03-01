@@ -5,22 +5,6 @@
   color: #b6dfff;
 }
 
-.bg1 {
-  /* height: 1080px; */
-  height: 1080px;
-  width: 100%;
-  background-color: #0f0e13;
-  background-image: radial-gradient(at 400% 400%, #100f15 0, transparent 50%), radial-gradient(at 150% 0%, #2f3e6a 0, transparent 50%), radial-gradient(at 130% 0%, #722741 0, transparent 50%);
-}
-
-.bg2 {
-  height: 1080px;
-  width: 100%;
-  background-color: #0f0e13;
-  background-image: radial-gradient(at 0% 0%, #100f15 0, transparent 50%), radial-gradient(at 50% 100%, #273359 0, transparent 50%);
-  border-top: solid 1px white;
-}
-
 .header {
   width: 100%;
   height: 64px;
@@ -181,6 +165,22 @@
   /* box-shadow: #2f71ff70 0px 0px 39px 0px;  */
 }
 
+.bg1 {
+  /* height: 1080px; */
+  height: 1080px;
+  width: 100%;
+  background-color: #0f0e13;
+  background-image: radial-gradient(at 400% 400%, #100f15 0, transparent 50%), radial-gradient(at 150% 0%, #2f3e6a 0, transparent 50%), radial-gradient(at 130% 0%, #722741 0, transparent 50%);
+}
+
+.bg2 {
+  height: 1080px;
+  width: 100%;
+  background-color: #0f0e13;
+  background-image: radial-gradient(at 0% 0%, #100f15 0, transparent 50%), radial-gradient(at 50% 100%, #273359 0, transparent 50%);
+  border-top: solid 1px white;
+}
+
 ::marker {
   color: rgba(0, 128, 0, 0);
 }
@@ -211,14 +211,14 @@
 }
 
 /* input[type=button]{
-      color: #ffffff;
-      background-color: radial-gradient(circle, rgba(136,0,255,1) 0%, rgba(0,211,255,1) 94%);
-      width: 100%;
-      height: 40px;
-      
-      border-radius: 5px;
-      border: none;
-  } */
+        color: #ffffff;
+        background-color: radial-gradient(circle, rgba(136,0,255,1) 0%, rgba(0,211,255,1) 94%);
+        width: 100%;
+        height: 40px;
+        
+        border-radius: 5px;
+        border: none;
+    } */
 .loginF {
   width: 40%;
   background-color: #00000054;
@@ -281,18 +281,18 @@
 }
 
 /* input[type=button]{
-      color: #ffffff;
-      background-color: radial-gradient(circle, rgba(136,0,255,1) 0%, rgba(0,211,255,1) 94%);
-      width: 100%;
-      height: 40px;
-      
-      border-radius: 5px;
-      border: none;
-  } */
+        color: #ffffff;
+        background-color: radial-gradient(circle, rgba(136,0,255,1) 0%, rgba(0,211,255,1) 94%);
+        width: 100%;
+        height: 40px;
+        
+        border-radius: 5px;
+        border: none;
+    } */
 .signupF {
   width: 40%;
   background-color: #00000054;
-  padding: 30px 30px;
+  padding: 30px 50px;
   border-radius: 20px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -313,6 +313,8 @@
 
 .signupF h1 {
   margin-bottom: 30px;
+  margin-left: 10px;
+  color: white;
 }
 
 .signupF input[type="text"] {
@@ -320,7 +322,7 @@
   height: 40px;
   border-radius: 10px;
   margin-top: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 25px;
   background-color: rgba(63, 55, 127, 0.377);
   border: none;
 }
@@ -338,6 +340,7 @@
   color: #7494ff;
   font-size: 15px;
   margin-top: 5px;
+  margin-left: 5px;
 }
 
 .signupF p {
@@ -407,7 +410,6 @@
   align-items: center;
 }
 
-/* for mobile */
 @media (max-width: 480px) {
   .logo {
     width: 100%;
@@ -434,43 +436,6 @@
     -ms-flex-direction: column;
     flex-direction: column;
   }
-}
-
-.top-msg {
-  background-color: rgba(236, 236, 236, 0.144);
-  width: 15vw;
-  position: fixed;
-  z-index: 1;
-  padding: 15px 0px;
-  color: #00d3ff;
-  border-radius: 20px;
-  margin-left: 40vw;
-  text-align: center;
-}
-
-.userbox {
-  width: 40vw;
-  background-color: rgba(0, 0, 0, 0.178);
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 50px auto;
-  border-radius: 20px;
-}
-
-.userbox .details p {
-  margin: 25px 0px;
 }
 
 .body {
@@ -594,5 +559,42 @@
   width: 100%;
   height: auto;
   margin: 5px;
+}
+
+.userbox {
+  width: 40vw;
+  background-color: rgba(0, 0, 0, 0.178);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 50px auto;
+  border-radius: 20px;
+}
+
+.userbox .details p {
+  margin: 25px 0px;
+}
+
+.top-msg {
+  background-color: rgba(236, 236, 236, 0.144);
+  width: 15vw;
+  position: fixed;
+  z-index: 1;
+  padding: 15px 0px;
+  color: #00d3ff;
+  border-radius: 20px;
+  margin-left: 40vw;
+  text-align: center;
 }
 /*# sourceMappingURL=style1.css.map */

@@ -13,16 +13,16 @@
         <header class="header">
             <div class="container">
                 <div class="logom">
-                    <a href="/index.html"><img src="img/edge tech.png" alt="logo" class="logo"></a>
+                    <a href="index.php"><img src="img/edge tech.png" alt="logo" class="logo"></a>
                 </div>
                 
 
                     <ul class="nav-bar">
-                        <li class="nav-link"><a href="index.html">Home</a></li>
-                        <li class="nav-link"><a href="pcbuilder.html">PC Builder</a></li>
-                        <li class="nav-link"><a href="shop.html">Shop</a></li>
-                        <li class="nav-link"><a href="contact.html">Contact</a></li>
-                        <li><div class="loginB"><a href="LoginPage.html">Login</a></div></li>
+                        <li class="nav-link"><a href="index.php">Home</a></li>
+                        <li class="nav-link"><a href="pcbuilder.php">PC Builder</a></li>
+                        <li class="nav-link"><a href="shop.php">Shop</a></li>
+                        <li class="nav-link"><a href="contact.php">Contact</a></li>
+                        <li><div class="loginB"><a href="LoginPage.php">Login</a></div></li>
                     </ul>
 
                   

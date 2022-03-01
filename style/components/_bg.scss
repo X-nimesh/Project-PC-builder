@@ -1,0 +1,33 @@
+.bg1 {
+  /* height: 1080px; */
+  height: 1080px;
+  width: 100%;
+  background-color: #0f0e13;
+  background-image: radial-gradient(at 400% 400%, #100f15 0, transparent 50%),
+    radial-gradient(at 150% 0%, #2f3e6a 0, transparent 50%),
+    radial-gradient(at 130% 0%, #722741 0, transparent 50%);
+}
+
+.bg2 {
+  height: 1080px;
+  width: 100%;
+  background-color: #0f0e13;
+  background-image: radial-gradient(at 0% 0%, #100f15 0, transparent 50%),
+    radial-gradient(at 50% 100%, #273359 0, transparent 50%);
+  border-top: solid 1px white;
+}
+
+::marker {
+  color: rgba(0, 128, 0, 0);
+}
+
+.bg1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  // align-items: center;
+}

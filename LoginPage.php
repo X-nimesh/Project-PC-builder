@@ -13,7 +13,7 @@
         <header class="header">
             <div class="container">
                 <div class="logom">
-                    <a href="/index.html"><img src="img/edge tech.png" alt="logo" class="logo"></a>
+                    <a href="index.php"><img src="img/edge tech.png" alt="logo" class="logo"></a>
                 </div>
                 
 
