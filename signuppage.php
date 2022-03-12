@@ -21,7 +21,7 @@
                         <li class="nav-link"><a href="index.php">Home</a></li>
                         <li class="nav-link"><a href="pcbuilder.php">PC Builder</a></li>
                         <li class="nav-link"><a href="shop.php">Shop</a></li>
-                        <li class="nav-link"><a href="contact.php">Contact</a></li>
+                        <li class="nav-link"><a href="signuppage.php">SignUp</a></li>
                         <li><div class="loginB"><a href="LoginPage.php">Login</a></div></li>
                     </ul>
 
@@ -31,6 +31,10 @@
         <div class="login">
             <div class="containermain">
                 <form class="signupF" action="server/signUpSave.php" method="post">
+                    <div class="switch">
+                        <li id="custo">Customer</li>
+                        <li id="vendor">Vendor</li>
+                    </div>
                     <h1>Join us</h1>
                     <label for="fname">Full Name</label>
                     <input title="fname" type="text" name="fname">

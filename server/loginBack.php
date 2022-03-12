@@ -8,22 +8,23 @@ include "conn.php";
 $email=$_POST['email'];
 $pass=md5($_POST['pass']);
 
-// echo $password;
+echo $_POST['pass'];
+// echo $pass;
 
 
-$sql="SELECT Name,address,contact,email,uname,userType FROM users WHERE email='$email' and password='$pass';";
+$sql="SELECT Name,address,contact,email,uname FROM users WHERE email='$email' or uname='$email' and password='$pass'  ;";
 $res= mysqli_query($conn,$sql);
 // echo $res;
 if(mysqli_num_rows($res)==1){
     while($row=mysqli_fetch_assoc($res)){
         
-        // print_r($row);
+        print_r($row);
         $_SESSION['Name']=$row['Name'];
         $_SESSION['add']=$row['address'];
         $_SESSION['contact']=$row['contact'];
         $_SESSION['email']=$row['email'];
         $_SESSION['uname']=$row['uname'];
-        $_SESSION['userType']=$row['userType'];
+       
         
     }   
     $_SESSION['logged_in']=1;

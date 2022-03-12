@@ -20,7 +20,12 @@
   // align-items: center;
   color: #b0c3ff;
 }
-
+.switch {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #00d3ff;
+}
 .signupF h1 {
   margin-bottom: 30px;
   margin-left: 10px;

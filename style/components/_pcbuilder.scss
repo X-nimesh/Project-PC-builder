@@ -35,33 +35,34 @@
         display: flex;
         gap: 60px;
         margin-bottom: 20px;
-      }
 
-      .compo {
-        margin-top: 30px;
-        margin-left: 25px;
-        p {
-          margin-bottom: 20px;
-          font-size: 21px;
-          font-weight: 600;
-          // text-align: center;
-        }
-        .option {
-          #company * {
+        .compo {
+          margin-top: 30px;
+          margin-left: 25px;
+          p {
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-size: 21px;
+            font-weight: 600;
+            // text-align: center;
           }
-          display: flex;
-          justify-content: space-between;
-          width: fit-content;
-          gap: 20px;
-          select {
-            font-size: 15px;
-            padding: 5px 15px;
-            text-align: center;
-            background-color: #2e3249;
-            border: 3px solid #ad00ff;
-            border-radius: 15px;
-            option {
-              color: white;
+          .option {
+            #company * {
+            }
+            display: flex;
+            justify-content: space-between;
+            width: fit-content;
+            gap: 20px;
+            select {
+              font-size: 15px;
+              padding: 5px 15px;
+              text-align: center;
+              background-color: #2e3249;
+              border: 3px solid #ad00ff;
+              border-radius: 15px;
+              option {
+                color: white;
+              }
             }
           }
         }

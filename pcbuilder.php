@@ -25,10 +25,10 @@
                         <div id='nav' class="nav-barIn">
                             <li class="nav-link"><a href="index.php">Home</a></li>
                             <li class="nav-link"><a href="pcbuilder.php">PC Builder</a></li>
-                            <li class="nav-link"><a href="shop.php">Shop</a></li>
                             <li class="nav-link"><a href="contact.php">Contact</a></li>
                         </div>
                         <li><div id="btn-main" class="loginB"><a href="LoginPage.php" id="btntxt">Login</a></div></li>
+                        <li><div  class="signup" id="signupB"><a href="signuppage.php" >Sign Up</a></div></li>
                     </ul>
             </div>
         </header>
@@ -155,19 +155,22 @@
 
     <script src="script.js"></script>
     <script >
-        // let logged_in='<?php echo $_SESSION['uname']; ?>';
-        // console.log(logged_in);
+    
         let profile=document.getElementById('nav');
-        console.log(<?php echo isset($_SESSION['uname'])?>);
+       
+        let signup = document.getElementById("signupB");
+       
+        // document.getElementById('signupB').style.display = "none";
         if(<?php echo isset($_SESSION['uname']);?>){
                 document.getElementById('btntxt').innerText = "Log Out";
                 document.getElementById('btntxt').href="server/logOut.php";
                 // document.getElementById('nav').innerHTML += " <li class='nav-link'><a href='/profile.php'>Profile</a></li>";
-                document.getElementById('nav').innerHTML += " <li class='nav-link'><a href='profile.php'><img src='img/account.png' class='profileicon' width=35px alt='acc'></a></li>";
-            
+                document.getElementById('nav').innerHTML += " <li class='nav-link'><a href='profile.php'><img src='img/account.png'  width=35px alt='acc'></a></li>";
+                signup.style.display="none";
 
                document.getElementById('btn-main').style.backgroundColor = "red";
         }
+        
     </script>
 </body>
 </html>

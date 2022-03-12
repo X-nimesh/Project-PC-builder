@@ -22,7 +22,8 @@
                         <li class="nav-link"><a href="pcbuilder.php">PC Builder</a></li>
                         <li class="nav-link"><a href="shop.php">Shop</a></li>
                         <li class="nav-link"><a href="contact.php">Contact</a></li>
-                        <li><div class="loginB"><a href="LoginPage.php">Login</a></div></li>
+                        <li class="nav-link"><a href=about.php">About</a></li>
+                       <li><div id="btn-main" class="loginB"><a href="signuppage.php" id="btntxt">Sign Up</a></div></li>
                     </ul>
 
                   
