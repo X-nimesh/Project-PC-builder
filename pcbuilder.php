@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="style/style1.css">
 </head>
 <body>
-
-
     <div class="bg1">
         <header class="header">
             <div class="container">
