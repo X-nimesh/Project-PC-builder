@@ -710,13 +710,6 @@ img {
   margin: 25px 0px;
 }
 
-
-  
-
-.adminLogin {
-  background: red;
-  color: yellow;
-=======
 .vendorLogbg {
   background-color: black;
   width: 100vw;
@@ -796,7 +789,11 @@ img {
 }
 .vendorLogbg .loginbox .vendorLoginFM .loginFvendor form {
   width: 100%;
+}
 
+.adminLogin {
+  background: red;
+  color: yellow;
 }
 
 .top-msg {
