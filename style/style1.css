@@ -5,10 +5,6 @@
   color: #b6dfff;
 }
 
-body {
-  background-color: #0f0e13;
-}
-
 .header {
   width: 100%;
   height: 64px;
@@ -162,7 +158,9 @@ body {
 
 .bg1 {
   /* height: 1080px; */
-  height: 1080px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 100%;
   background-color: #0f0e13;
   background-image: radial-gradient(at 400% 400%, #100f15 0, transparent 50%), radial-gradient(at 150% 0%, #2f3e6a 0, transparent 50%), radial-gradient(at 130% 0%, #722741 0, transparent 50%);
@@ -712,9 +710,93 @@ img {
   margin: 25px 0px;
 }
 
+
+  
+
 .adminLogin {
   background: red;
   color: yellow;
+=======
+.vendorLogbg {
+  background-color: black;
+  width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vendorLogbg .loginbox {
+  background-color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5px;
+  overflow: hidden;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+}
+.vendorLogbg .loginbox .Lphoto {
+  margin-bottom: -1px;
+}
+.vendorLogbg .loginbox .vendorLoginFM {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 50px;
+  gap: 70px;
+}
+.vendorLogbg .loginbox .vendorLoginFM .signupT {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  align-items: center;
+  width: 20vw;
+  padding-top: 20px;
+  gap: 10px;
+}
+.vendorLogbg .loginbox .vendorLoginFM .signupT p {
+  color: black;
+  font-weight: 600;
+  font-size: 12px;
+}
+.vendorLogbg .loginbox .vendorLoginFM .signupT button {
+  padding: 7px 9px;
+  color: white;
+  background-color: #2952e3;
+  font-weight: 600;
+  font-size: 13px;
+  border-radius: 5px;
+  border: none;
+}
+.vendorLogbg .loginbox .vendorLoginFM .loginFvendor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 15vw;
+}
+.vendorLogbg .loginbox .vendorLoginFM .loginFvendor h1,
+.vendorLogbg .loginbox .vendorLoginFM .loginFvendor p,
+.vendorLogbg .loginbox .vendorLoginFM .loginFvendor label {
+  color: black;
+}
+.vendorLogbg .loginbox .vendorLoginFM .loginFvendor h1 {
+  font-size: 25px;
+}
+.vendorLogbg .loginbox .vendorLoginFM .loginFvendor input[type=text],
+.vendorLogbg .loginbox .vendorLoginFM .loginFvendor input[type=password] {
+  width: 100%;
+  height: 30px;
+}
+.vendorLogbg .loginbox .vendorLoginFM .loginFvendor form {
+  width: 100%;
+
 }
 
 .top-msg {
