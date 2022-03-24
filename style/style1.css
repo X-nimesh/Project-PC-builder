@@ -791,9 +791,49 @@ img {
   width: 100%;
 }
 
-.adminLogin {
-  background: red;
-  color: yellow;
+.adminbg {
+  background: #005566;
+  background: radial-gradient(circle, #005566 12%, #03002f 100%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.adminbg .adminMain {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.adminbg .adminMain .adminFLogo {
+  width: 300px;
+}
+.adminbg .adminMain .adminInnerForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.adminbg .adminMain .adminInnerForm h2 {
+  font-size: 15px;
+  margin-bottom: 60px;
+}
+.adminbg .adminMain .adminInnerForm form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.adminbg .adminMain .adminInnerForm form input[type=text],
+.adminbg .adminMain .adminInnerForm form input[type=password] {
+  height: 30px;
+  width: 90%;
+}
+.adminbg .adminMain .adminInnerForm form input[type=submit] {
+  width: 90%;
+  background-color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
 }
 
 .top-msg {

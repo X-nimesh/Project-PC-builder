@@ -8,11 +8,19 @@
     <title>Admin Login</title>
 </head>
 <body>
-    <form action="adminBack.php" class="adminLogin">
-        username: <input type="text" name="username" id="username"><br>
-        password: <input type="password" name="password" id="password"><br>
-        <input type="submit" value="Login">
-    </form>
-    
+    <div class="adminbg">
+        <div class="adminMain">
+            <img class="adminFLogo" src="../img/edge tech.png" alt="logo">
+            <div class="adminInnerForm">
+                <h1 class="adminLhead">Welcome</h1>
+                <h2>Please Login to admin Dashboard</h2>
+                <form action="adminBack.php" class="adminLogin">
+                    <input type="text" name="username" id="username"><br>
+                    <input type="password" name="password" id="password"><br>
+                    <input type="submit" value="Login">
+                </form>
+            </div>
+        </div> 
+    </div>
 </body>
 </html>
