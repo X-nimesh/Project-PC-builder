@@ -40,7 +40,7 @@
     <div class="pic">
         <img src="img/account.png" width=100px alt="user">
     </div>
-    <p class="type"><?php echo $_SESSION['userType']?></p>
+ 
     <div class="details">
         <p class="name">Name: <?php echo $_SESSION['Name']?></p>
         <p class="email">E-mail: <?php echo $_SESSION['email']?></p>

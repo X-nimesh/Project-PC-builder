@@ -158,16 +158,16 @@
 
 .bg1 {
   /* height: 1080px; */
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100%;
+  min-height: 100vh;
   width: 100%;
   background-color: #0f0e13;
   background-image: radial-gradient(at 400% 400%, #100f15 0, transparent 50%), radial-gradient(at 150% 0%, #2f3e6a 0, transparent 50%), radial-gradient(at 130% 0%, #722741 0, transparent 50%);
 }
 
 .bg2 {
-  height: 1080px;
+  height: 100%;
+  min-height: 100vh;
   width: 100%;
   background-color: #0f0e13;
   background-image: radial-gradient(at 0% 0%, #100f15 0, transparent 50%), radial-gradient(at 50% 100%, #273359 0, transparent 50%);
@@ -181,6 +181,7 @@
 .bg1 {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .login {
@@ -699,15 +700,19 @@ img {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 30px;
+  padding: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 50px auto;
+  margin-top: 100px;
   border-radius: 20px;
 }
 .userbox .details p {
   margin: 25px 0px;
+}
+.userbox .pic {
+  margin-bottom: 30px;
 }
 
 .vendorLogbg {
@@ -815,7 +820,7 @@ img {
 }
 .adminbg .adminMain .adminInnerForm h2 {
   font-size: 15px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 .adminbg .adminMain .adminInnerForm form {
   width: 300px;
@@ -825,15 +830,39 @@ img {
 }
 .adminbg .adminMain .adminInnerForm form input[type=text],
 .adminbg .adminMain .adminInnerForm form input[type=password] {
+  color: #2b2b2b;
   height: 30px;
   width: 90%;
+  border-radius: 15px;
+  padding-left: 15px;
 }
 .adminbg .adminMain .adminInnerForm form input[type=submit] {
-  width: 90%;
-  background-color: black;
+  width: 100%;
+  background-color: #1aa4e2;
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
   border: none;
   padding: 10px 20px;
   border-radius: 15px;
+  margin-top: 20px;
+  transition: all 0.2s;
+}
+.adminbg .adminMain .adminInnerForm form input[type=submit]:hover {
+  background-color: #7cd5ff;
+  transform: scale(1.1);
+}
+.adminbg .adminMain .adminInnerForm form input[type=submit]:active {
+  background-color: #ffffff;
+  transform: scale(1.2);
+}
+.adminbg .adminMain .adminInnerForm form div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.adminbg .adminMain .adminInnerForm form div img {
+  width: 12%;
 }
 
 .top-msg {

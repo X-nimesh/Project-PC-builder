@@ -31,10 +31,7 @@
         <div class="login">
             <div class="containermain">
                 <form class="signupF" action="server/signUpSave.php" method="post">
-                    <div class="switch">
-                        <li id="custo">Customer</li>
-                        <li id="vendor">Vendor</li>
-                    </div>
+                  
                     <h1>Join us</h1>
                     <label for="fname">Full Name</label>
                     <input title="fname" type="text" name="fname">

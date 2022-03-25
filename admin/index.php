@@ -14,9 +14,15 @@
             <div class="adminInnerForm">
                 <h1 class="adminLhead">Welcome</h1>
                 <h2>Please Login to admin Dashboard</h2>
-                <form action="adminBack.php" class="adminLogin">
-                    <input type="text" name="username" id="username"><br>
-                    <input type="password" name="password" id="password"><br>
+                <form action="../server/adminLBack.php" class="adminLogin" method="POST">
+                    <div>
+                        <img src="../img/user.png" alt="">
+                        <input type="text" name="uname" id="uname"><br>
+                    </div>
+                    <div>
+                        <img src="../img/lock.png" alt="">
+                        <input type="password" name="pass" id="pass"><br>
+                    </div>
                     <input type="submit" value="Login">
                 </form>
             </div>
