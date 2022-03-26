@@ -5,9 +5,7 @@ $btncolor: #2952e3;
   font-family: Segoe UI;
   color: rgb(182, 223, 255);
 }
-body {
-  // background-color: #0f0e13;
-}
+
 @import "components/_header";
 @import "components/_bg";
 @import "components/loginF";
