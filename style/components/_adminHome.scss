@@ -1,0 +1,17 @@
+* {
+  color: black;
+}
+.body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .sidebarA {
+    // position: fixed;
+    // left: 0;
+
+    padding-left: 100px;
+  }
+  .mainA {
+    position: static;
+  }
+}
