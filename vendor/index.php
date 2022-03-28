@@ -19,11 +19,11 @@
                     <h1>Hello! Welcome back</h1>
                     <p>Log in wìth your to that you entered
                         during Your registration</p>
-                        <form action="vendor/index.php" method="post">
-                            <label for="username">Username:</label> <br>
-                            <input type="text" name="username" id="username"> <br>
+                        <form action="../server/vendorLoginBack.php" method="post">
+                            <label for="username">E-mail:</label> <br>
+                            <input type="text" name="email" id="username"> <br>
                             <label for="password">Password : </label> <br>
-                            <input type="password" name="password" id="password"> <br>
+                            <input type="password" name="pass" id="password"> <br>
                             <input type="submit" value="Login">
                         </form>
                 </div>

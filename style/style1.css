@@ -407,6 +407,9 @@
   display: flex;
   justify-content: space-between;
 }
+.body * {
+  color: white;
+}
 .body .PcContainer {
   width: 58vw;
   height: -webkit-fit-content;
@@ -448,7 +451,7 @@
   margin-left: 25px;
 }
 .body .PcContainer .core .inside .compo p {
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin-bottom: 20px;
   font-size: 21px;
   font-weight: 600;
@@ -461,9 +464,13 @@
   width: fit-content;
   gap: 20px;
 }
+.body .PcContainer .core .inside .compo .option #CPUmodel {
+  width: 150px;
+}
 .body .PcContainer .core .inside .compo .option select {
-  font-size: 15px;
-  padding: 5px 15px;
+  min-width: 150px;
+  font-size: 17px;
+  padding: 7px 0;
   text-align: center;
   background-color: #2e3249;
   border: 3px solid #ad00ff;
@@ -716,7 +723,7 @@ img {
 }
 
 .vendorLogbg {
-  background-color: black;
+  background-color: #eafcff;
   width: 100vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -777,7 +784,7 @@ img {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  width: 15vw;
+  width: 18vw;
 }
 .vendorLogbg .loginbox .vendorLoginFM .loginFvendor h1,
 .vendorLogbg .loginbox .vendorLoginFM .loginFvendor p,
@@ -789,11 +796,16 @@ img {
 }
 .vendorLogbg .loginbox .vendorLoginFM .loginFvendor input[type=text],
 .vendorLogbg .loginbox .vendorLoginFM .loginFvendor input[type=password] {
+  padding: 10px;
   width: 100%;
   height: 30px;
+  border-radius: 10px;
 }
 .vendorLogbg .loginbox .vendorLoginFM .loginFvendor form {
   width: 100%;
+}
+.vendorLogbg .loginbox .vendorLoginFM .loginFvendor form label {
+  margin: 50px 0px;
 }
 
 .adminbg {
@@ -818,7 +830,11 @@ img {
   align-items: center;
   gap: 20px;
 }
+.adminbg .adminMain .adminInnerForm h1 {
+  color: #caefff;
+}
 .adminbg .adminMain .adminInnerForm h2 {
+  color: #caefff;
   font-size: 15px;
   margin-bottom: 30px;
 }
@@ -865,20 +881,61 @@ img {
   width: 12%;
 }
 
-* {
+.bodyA {
+  height: 100vh;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  top: 0;
+}
+.bodyA * {
   color: black;
 }
-
-.body {
+.bodyA .sidebarA {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 20vw;
+  background-color: black;
+  height: 100%;
   align-items: center;
 }
-.body .sidebarA {
-  padding-left: 100px;
+.bodyA .sidebarA img {
+  width: 15vw;
+  margin-top: 50px;
 }
-.body .mainA {
-  position: static;
+.bodyA .sidebarA * {
+  color: aliceblue;
+}
+.bodyA .sidebarA ul {
+  height: 60vh;
+  width: 100%;
+  text-align: center;
+}
+.bodyA .sidebarA ul li {
+  width: 100%;
+  border: solid grey 1px;
+  padding: 10px 10px;
+}
+.bodyA .mainA {
+  margin-top: 40px;
+  margin-left: 25vw;
+  height: 200vh;
+}
+.bodyA .mainA .productsEnlisted {
+  margin-top: 40px;
+}
+.bodyA .mainA .productsEnlisted .productsAdmin {
+  width: 30vw;
+  border: solid 2px;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+.bodyA .mainA .productsEnlisted .productsAdmin .categoryH li {
+  margin: 5px 0;
+  font-size: 16px;
 }
 
 .top-msg {

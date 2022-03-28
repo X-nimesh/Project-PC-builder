@@ -12,18 +12,43 @@
     <title>Admin Page</title>
 </head>
 <body>
-   <div class="body">
+   <div class="bodyA">
         <div class="sidebarA">
+            <img src="../img/edge tech.png" alt="">
             <ul>
+                <li>Home</li>
+                <li>Products</li>
                 <li>Orders</li>
                 <li>Users</li>
                 <li>Vendors</li>
-                <li>Account</li>
+                <li>Admin</li>
             </ul>
         </div>
         <div class="mainA">
             <h1>Hello Admin!</h1>
             <p>Welcome to the admin page!</p>
+            <div class="productsEnlisted">
+                <h1>Product Enlisted</h1>
+                <div class="productsAdmin">
+                   
+                        <ul class="categoryH">
+                            <li>CPU</li>
+                            <li>GPU</li>
+                            <li>RAM</li>
+                            <li>Motherboard</li>
+                            <li>PSU</li>
+                            <li>Storage</li>
+                            <li>Case</li>
+
+                        </ul>
+                        <ul class="categoryNumH">
+                           <?php
+                           
+                           ?>
+                        </ul>
+                    
+                </div>
+            </div>
         </div>
     </div>
     <script >
