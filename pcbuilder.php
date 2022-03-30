@@ -157,9 +157,8 @@
                                         $sql="SELECT  DISTINCT company  FROM motherboard;";
                                         $res= mysqli_query($conn,$sql);
                                         while($row=mysqli_fetch_assoc($res)){
-
                                             $out=$row['company'];
-                                            echo "<option value=$out>$out</option>"; 
+                                            // echo "<option value=$out>$out</option>"; 
                                         }  
                                     ?>
                                    
@@ -192,7 +191,7 @@
                                 
                                 <select name="Stmodel" id="Stmodel">
                                     <option value="" selected disabled hidden>Model</option>
-                                   
+                                    
                                 </select>
                             </div>
                         </div>
@@ -202,6 +201,9 @@
             </div>
             <div class="pc">
                 <img src="img/PC.png" alt="">
+                <p>Price:</p>
+                <p>Power Comsumption:</p>
+                <p>Power Supply: </p>
             </div>
         </form>
        
@@ -233,6 +235,9 @@
     </script>
     <script>
         let PowSupply=0;
+        let totalPrice,cpuPrice,gpuPrice;
+        let price=[];
+        let powerConsump=0;
         //for CPU
         $('#CPUcompany').change(function(){
             let company=$('#CPUcompany').val();
@@ -252,7 +257,7 @@
                     //    $("#CPUmodel").html(`<option value="${value.model}">${value.model}</option>`);
                    });
                  $("#CPUmodel").html(select);
-
+                    
                 }
             });
 
@@ -358,6 +363,7 @@
                    console.log(data);
                   $.each(data,function(index,value){
                       console.log(value.model);
+                      console.log(value.price);
                       select+=`<option value="${value.model}">${value.model}</option>`;
                     //   $("#GPUmodel").html(`<option value="${value.model}">${value.model}</option>`);
                   });
@@ -365,6 +371,9 @@
                }
            });
         });
+      
+
+
     </script>
    
 </body>
