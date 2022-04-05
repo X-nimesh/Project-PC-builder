@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
     session_start();
+    include "conn.php";
 
 ?>
 <html lang="en">
@@ -32,13 +33,55 @@
                 <div class="productsAdmin">
                    
                         <ul class="categoryH">
-                            <li>CPU</li>
-                            <li>GPU</li>
-                            <li>RAM</li>
-                            <li>Motherboard</li>
-                            <li>PSU</li>
-                            <li>Storage</li>
-                            <li>Case</li>
+                            <li> CPU<p><?php 
+                              $sql="SELECT COUNT(cpuId) as total FROM cpu;";
+                              $res= mysqli_query($conn,$sql);
+                              // echo $res;
+                              $data=mysqli_fetch_assoc($res);
+                              echo $data['total'];
+                            ?></p></li>
+                            <li>GPU<p><?php 
+                              $sql="SELECT COUNT(gpuId) as total FROM gpu;";
+                              $res= mysqli_query($conn,$sql);
+                              // echo $res;
+                              $data=mysqli_fetch_assoc($res);
+                              echo $data['total'];
+                            ?></p></li>
+                            <li>RAM<p><?php 
+                              $sql="SELECT COUNT(ramId) as total FROM ram;";
+                              $res= mysqli_query($conn,$sql);
+                              // echo $res;
+                              $data=mysqli_fetch_assoc($res);
+                              echo $data['total'];
+                            ?></p></li>
+                            <li>Motherboard<p><?php 
+                              $sql="SELECT COUNT(ramId) as total FROM ram;";
+                              $res= mysqli_query($conn,$sql);
+                              // echo $res;
+                              $data=mysqli_fetch_assoc($res);
+                              echo $data['total'];
+                            ?></p></li>
+                            <li>PSU<p><?php 
+                              $sql="SELECT COUNT(ramId) as total FROM ram;";
+                              $res= mysqli_query($conn,$sql);
+                              // echo $res;
+                              $data=mysqli_fetch_assoc($res);
+                              echo $data['total'];
+                            ?></p></li>
+                            <li>Storage<p><?php 
+                              $sql="SELECT COUNT(ramId) as total FROM ram;";
+                              $res= mysqli_query($conn,$sql);
+                              // echo $res;
+                              $data=mysqli_fetch_assoc($res);
+                              echo $data['total'];
+                            ?></p></li>
+                            <li>Case<p><?php 
+                              $sql="SELECT COUNT(ramId) as total FROM ram;";
+                              $res= mysqli_query($conn,$sql);
+                              // echo $res;
+                              $data=mysqli_fetch_assoc($res);
+                              echo $data['total'];
+                            ?></p></li>
 
                         </ul>
                         <ul class="categoryNumH">

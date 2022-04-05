@@ -256,6 +256,7 @@
                        
                     //    $("#CPUmodel").html(`<option value="${value.model}">${value.model}</option>`);
                    });
+                   
                  $("#CPUmodel").html(select);
                     
                 }

@@ -55,7 +55,14 @@
         padding: 10px 20px;
         .categoryH li {
           margin: 5px 0;
-          font-size: 16px;
+          font-size: 20px;
+          display: flex;
+          justify-content: space-between;
+          p {
+            margin-right: 20px;
+            font-weight: 600;
+          }
+          // flex-direction: column;
         }
       }
     }
