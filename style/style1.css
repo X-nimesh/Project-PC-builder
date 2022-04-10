@@ -795,8 +795,15 @@ img {
   font-size: 25px;
 }
 .vendorLogbg .loginbox .vendorLoginFM .loginFvendor input[type=submit] {
-  background-color: rgb(122, 122, 122);
+  background-color: #2952e3;
+  color: white;
   width: 100%;
+  padding: 8px;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
 }
 .vendorLogbg .loginbox .vendorLoginFM .loginFvendor input[type=text],
 .vendorLogbg .loginbox .vendorLoginFM .loginFvendor input[type=password] {
@@ -804,12 +811,101 @@ img {
   width: 100%;
   height: 30px;
   border-radius: 10px;
+  margin: 8px 0;
 }
 .vendorLogbg .loginbox .vendorLoginFM .loginFvendor form {
   width: 100%;
 }
 .vendorLogbg .loginbox .vendorLoginFM .loginFvendor form label {
-  margin: 50px 0px;
+  margin-left: 5px;
+  font-weight: 500;
+}
+
+body.dashboard .dashboard,
+body.products .products,
+body.orders .orders,
+body.setting .setting {
+  border-right: 10px solid #2952e3;
+}
+body.dashboard .dashboard a,
+body.products .products a,
+body.orders .orders a,
+body.setting .setting a {
+  color: #94abff;
+}
+
+.bodyV {
+  height: 100vh;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  top: 0;
+}
+.bodyV * {
+  color: black;
+}
+.bodyV .sidebarV {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  gap: 50px;
+  left: 0;
+  top: 0;
+  width: 20vw;
+  background-color: black;
+  height: 100%;
+  align-items: center;
+}
+.bodyV .sidebarV img {
+  width: 10vw;
+  margin-top: 50px;
+  cursor: pointer;
+}
+.bodyV .sidebarV p {
+  text-transform: capitalize;
+  font-size: 30px;
+  font-weight: 600;
+  color: aqua;
+}
+.bodyV .sidebarV * {
+  color: aliceblue;
+}
+.bodyV .sidebarV ul {
+  height: 60vh;
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+.bodyV .sidebarV ul li {
+  width: 100%;
+  padding: 10px 10px;
+}
+.bodyV .sidebarV ul li a {
+  text-decoration: none;
+}
+.bodyV .mainV {
+  margin-top: 40px;
+  margin-left: 25vw;
+  height: 200vh;
+}
+.bodyV .mainV .productsEnlisted {
+  margin-top: 40px;
+}
+.bodyV .mainV .productsEnlisted .productsAdmin {
+  width: 30vw;
+  border: solid 2px;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+.bodyV .mainV .productsEnlisted .productsAdmin .categoryH li {
+  margin: 5px 0;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.bodyV .mainV .productsEnlisted .productsAdmin .categoryH li p {
+  margin-right: 20px;
+  font-weight: 600;
 }
 
 .adminbg {

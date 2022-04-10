@@ -14,17 +14,9 @@
 </head>
 <body>
    <div class="bodyA">
-        <div class="sidebarA">
-            <img src="../img/edge tech.png" alt="">
-            <ul>
-                <li>Home</li>
-                <li>Products</li>
-                <li>Orders</li>
-                <li>Users</li>
-                <li>Vendors</li>
-                <li>Admin</li>
-            </ul>
-        </div>
+        <?php
+            include "adminNavbar.php";
+          ?>
         <div class="mainA">
             <h1>Hello Admin!</h1>
             <p>Welcome to the admin page!</p>

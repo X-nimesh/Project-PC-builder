@@ -1,0 +1,91 @@
+body.dashboard .dashboard,
+body.products .products,
+body.orders .orders,
+body.setting .setting {
+  // background-color: rgb(255, 255, 255);
+  border-right: 10px solid #2952e3;
+  a {
+    color: #94abff;
+  }
+}
+.bodyV {
+  * {
+    color: black;
+  }
+  // display: flex;
+  // flex-direction: row;
+  // align-items: center;
+  height: 100vh;
+  min-height: fit-content;
+  // background-color: black;
+  top: 0;
+  .sidebarV {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    gap: 50px;
+    left: 0;
+    top: 0;
+    width: 20vw;
+    background-color: black;
+    height: 100%;
+    align-items: center;
+
+    img {
+      width: 10vw;
+      margin-top: 50px;
+      cursor: pointer;
+    }
+    p {
+      text-transform: capitalize;
+      font-size: 30px;
+      font-weight: 600;
+      color: aqua;
+    }
+    * {
+      color: aliceblue;
+    }
+
+    ul {
+      height: 60vh;
+      width: 100%;
+      text-align: center;
+      margin-top: 50px;
+      li {
+        width: 100%;
+        // border: solid grey 1px;
+        padding: 10px 10px;
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .mainV {
+    // margin: 30px 30px;
+    margin-top: 40px;
+    // position: static;
+    margin-left: 25vw;
+    height: 200vh;
+    .productsEnlisted {
+      margin-top: 40px;
+      .productsAdmin {
+        width: 30vw;
+        border: solid 2px;
+        border-radius: 20px;
+        padding: 10px 20px;
+        .categoryH li {
+          margin: 5px 0;
+          font-size: 20px;
+          display: flex;
+          justify-content: space-between;
+          p {
+            margin-right: 20px;
+            font-weight: 600;
+          }
+          // flex-direction: column;
+        }
+      }
+    }
+  }
+}
