@@ -888,6 +888,22 @@ body.setting .setting a {
   margin-left: 25vw;
   height: 200vh;
 }
+.bodyV .mainV .top {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10vw;
+  margin-bottom: 20px;
+}
+.bodyV .mainV .top .buttonNewProduct {
+  background-color: blue;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
 .bodyV .mainV .productsEnlisted {
   margin-top: 40px;
 }
@@ -906,6 +922,34 @@ body.setting .setting a {
 .bodyV .mainV .productsEnlisted .productsAdmin .categoryH li p {
   margin-right: 20px;
   font-weight: 600;
+}
+
+.cpu table {
+  border-collapse: collapse;
+  border: black 2px solid;
+  width: 60vw;
+}
+.cpu table thead {
+  border: black 2px solid;
+}
+.cpu table tr td {
+  text-align: center;
+}
+
+.gpu {
+  margin-top: 20px;
+}
+
+.gpu table {
+  border-collapse: collapse;
+  border: black 2px solid;
+  width: 60vw;
+}
+.gpu table thead {
+  border: black 2px solid;
+}
+.gpu table tr td {
+  text-align: center;
 }
 
 .adminbg {

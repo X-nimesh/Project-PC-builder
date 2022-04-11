@@ -62,6 +62,22 @@ body.setting .setting {
     }
   }
   .mainV {
+    .top {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 10vw;
+      .buttonNewProduct {
+        background-color: blue;
+        padding: 10px 20px;
+        border-radius: 20px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      margin-bottom: 20px;
+    }
     // margin: 30px 30px;
     margin-top: 40px;
     // position: static;
@@ -87,5 +103,31 @@ body.setting .setting {
         }
       }
     }
+  }
+}
+
+.cpu table {
+  border-collapse: collapse;
+  border: black 2px solid;
+  width: 60vw;
+  thead {
+    border: black 2px solid;
+  }
+  tr td {
+    text-align: center;
+  }
+}
+.gpu {
+  margin-top: 20px;
+}
+.gpu table {
+  border-collapse: collapse;
+  border: black 2px solid;
+  width: 60vw;
+  thead {
+    border: black 2px solid;
+  }
+  tr td {
+    text-align: center;
   }
 }

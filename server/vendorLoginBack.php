@@ -1,9 +1,11 @@
 <?php
+    session_start();
+
     include "conn.php";
     $email=$_POST['email'];
     $pass=md5($_POST['pass']);
     echo $pass;
-    $sql="SELECT Name,address,contact,email FROM vendor WHERE email='$email' OR name='$email' and pass='$pass'  ;";
+    $sql="SELECT Name,address,contact,email,vid FROM vendor WHERE email='$email' OR name='$email' and pass='$pass'  ;";
     $res= mysqli_query($conn,$sql);
     if(mysqli_num_rows($res)==1){
         $row=mysqli_fetch_assoc($res);
@@ -13,6 +15,8 @@
             $_SESSION['add']=$row['address'];
             $_SESSION['contact']=$row['contact'];
             $_SESSION['email']=$row['email'];
+            $_SESSION['vid']=$row['vid'];
+
             // $_SESSION['uname']=$row['uname'];
         
             
