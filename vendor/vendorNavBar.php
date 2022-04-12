@@ -1,5 +1,5 @@
 <div class="sidebarV">
-            <img src="../img/edge tech.png" alt="">
+            <a href="home.php"><img src="../img/edge tech.png" alt=""></a>
      
             <ul>
                 <li class="dashboard" ><a  href="home.php"> Dashboard</a></li>
@@ -9,3 +9,4 @@
               
             </ul>
         </div>
+        

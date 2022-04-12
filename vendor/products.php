@@ -101,11 +101,7 @@
                         </tr>
                         </table>
                     </div>
-                    <div class="addProduct">
-                        <form action="addProducts.php">
-                            
-                        </form>
-                    </div>
+                    
                 </div>
             </div>
    </div>
