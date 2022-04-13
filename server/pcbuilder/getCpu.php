@@ -6,7 +6,7 @@ $cpu=$_POST['comp'];
 // $id=$_POST['id'];
 // echo $cpu;
 
-$sql="SELECT DISTINCT model FROM cpu WHERE company='$cpu';";
+$sql="SELECT * FROM cpu WHERE company='$cpu';";
 $res= mysqli_query($conn,$sql);
 $model=[];
 if(mysqli_num_rows($res)>0){

@@ -33,9 +33,12 @@
       height: 60vh;
       width: 100%;
       text-align: center;
+      a {
+        text-decoration: none;
+      }
       li {
         width: 100%;
-        border: solid grey 1px;
+        // border: solid grey 1px;
         padding: 10px 10px;
       }
     }

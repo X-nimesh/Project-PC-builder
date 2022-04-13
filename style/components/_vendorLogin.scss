@@ -38,16 +38,29 @@
         p {
           color: black;
           font-weight: 600;
-          font-size: 12px;
+          font-size: 15px;
         }
         button {
           padding: 7px 9px;
           color: rgb(255, 255, 255);
           background-color: $btncolor;
           font-weight: 600;
-          font-size: 13px;
+          font-size: 14px;
           border-radius: 5px;
           border: none;
+          transition: all 0.2s;
+          &:hover {
+            background-color: #0008ff;
+            transform: scale(1.2);
+            box-shadow: rgba(0, 0, 0, 0.253) 5px 8px 20px;
+          }
+          &:active {
+            // background-color: white;
+            // box-shadow: rgba(0, 0, 0, 0.253) 0px 0px 0px;
+            // transform: translateX(1);
+            box-shadow: 0 5px rgba(0, 0, 0, 0.274);
+            transform: translateY(4px);
+          }
         }
       }
       .loginFvendor {
@@ -75,6 +88,10 @@
           font-size: 18px;
           border: none;
           border-radius: 10px;
+          transition: all 0.2s;
+          &:hover {
+            transform: scale(1.1);
+          }
         }
         input[type="text"],
         input[type="password"] {
@@ -84,6 +101,7 @@
           border-radius: 10px;
           margin: 8px 0;
         }
+
         form {
           width: 100%;
           label {

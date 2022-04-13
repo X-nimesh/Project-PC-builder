@@ -12,16 +12,16 @@
     <title>Products</title>
     <link rel="stylesheet" href="../style/style1.css">
 </head>
-<body class="products">
-   <div class="bodyV">
-   <div class="bodyV">
+<body>
+
+   <div class="bodyA">
         <?php
-            include "vendorNavBar.php";
+            include "adminNavbar.php";
         ?>
-         <div class="mainV">
+         <div class="mainA">
                 <div class="top">
                     <div class="welcome">
-                        <h1 style="text-transform:capitalize;">Hello <?php echo $_SESSION['Name'];?> </h1>
+                        <h1 style="text-transform:capitalize;">Hello <?php echo $_SESSION['name'];?> </h1>
                         <h3>Welcome to the vendor page!</h3>
                     </div>
                     <!-- popupbutton -->
@@ -51,8 +51,8 @@
                           <tr>
                           <?php
                             include "../conn.php";    
-                            $id=$_SESSION['vid'];
-                            $sql="SELECT  * FROM cpu where vid='$id';";
+                            // $id=$_SESSION['vid'];
+                            $sql="SELECT  * FROM cpu ;";
                             $res= mysqli_query($conn,$sql);
                             while($row=mysqli_fetch_assoc($res)){
 

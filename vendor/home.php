@@ -18,8 +18,8 @@
             include "vendorNavBar.php";
         ?>
         <div class="mainV">
-            <h1>Hello Admin!</h1>
-            <p>Welcome to the admin page!</p>
+            <h1>Hello Vendor!</h1>
+            <p>Welcome to the vendor page!</p>
             <div class="productsEnlisted">
                 <h1>Product Enlisted</h1>
                 <div class="productsAdmin">

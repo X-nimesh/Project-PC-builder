@@ -481,12 +481,33 @@
 }
 .body .pc {
   margin-left: 65vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: -webkit-sticky;
   position: fixed;
   top: 125px;
 }
 .body .pc img {
   width: 350px;
+}
+.body .pc input {
+  padding: 5px 10px;
+  background-color: #2e3249;
+  border: solid 2px #ad00ff;
+  border-radius: 15px;
+  width: 10vw;
+  height: 50px;
+  font-size: 20px;
+  transition: 0.2s ease-in-out;
+  margin-top: 20px;
+}
+.body .pc input:hover {
+  background-color: #ad00ff;
+  transform: scale(1.2);
+}
+.body .pc input:active {
+  transform: scale(1);
 }
 
 .mainH {
@@ -767,16 +788,26 @@ img {
 .vendorLogbg .loginbox .vendorLoginFM .signupT p {
   color: black;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 15px;
 }
 .vendorLogbg .loginbox .vendorLoginFM .signupT button {
   padding: 7px 9px;
   color: rgb(255, 255, 255);
   background-color: #2952e3;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 14px;
   border-radius: 5px;
   border: none;
+  transition: all 0.2s;
+}
+.vendorLogbg .loginbox .vendorLoginFM .signupT button:hover {
+  background-color: #0008ff;
+  transform: scale(1.2);
+  box-shadow: rgba(0, 0, 0, 0.253) 5px 8px 20px;
+}
+.vendorLogbg .loginbox .vendorLoginFM .signupT button:active {
+  box-shadow: 0 5px rgba(0, 0, 0, 0.274);
+  transform: translateY(4px);
 }
 .vendorLogbg .loginbox .vendorLoginFM .loginFvendor {
   display: flex;
@@ -804,9 +835,128 @@ img {
   font-size: 18px;
   border: none;
   border-radius: 10px;
+  transition: all 0.2s;
+}
+.vendorLogbg .loginbox .vendorLoginFM .loginFvendor input[type=submit]:hover {
+  transform: scale(1.1);
 }
 .vendorLogbg .loginbox .vendorLoginFM .loginFvendor input[type=text],
 .vendorLogbg .loginbox .vendorLoginFM .loginFvendor input[type=password] {
+  padding: 10px;
+  width: 100%;
+  height: 30px;
+  border-radius: 10px;
+  margin: 8px 0;
+}
+.vendorLogbg .loginbox .vendorLoginFM .loginFvendor form {
+  width: 100%;
+}
+.vendorLogbg .loginbox .vendorLoginFM .loginFvendor form label {
+  margin-left: 5px;
+  font-weight: 500;
+}
+
+.vendorLogbg {
+  background-color: rgb(234, 252, 255);
+  width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vendorLogbg .loginbox {
+  background-color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5px;
+  overflow: hidden;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.vendorLogbg .loginbox .Lphoto {
+  margin-bottom: -1px;
+}
+.vendorLogbg .loginbox .vendorLoginFM {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 20px;
+  padding-bottom: 30px;
+}
+.vendorLogbg .loginbox .vendorLoginFM .signupT {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  align-items: center;
+  width: 20vw;
+  padding-top: 20px;
+  gap: 10px;
+}
+.vendorLogbg .loginbox .vendorLoginFM .signupT p {
+  color: black;
+  font-weight: 600;
+  font-size: 15px;
+}
+.vendorLogbg .loginbox .vendorLoginFM .signupT button {
+  padding: 7px 9px;
+  color: rgb(255, 255, 255);
+  background-color: #2952e3;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.2s;
+}
+.vendorLogbg .loginbox .vendorLoginFM .signupT button:hover {
+  background-color: #0008ff;
+  transform: scale(1.2);
+  box-shadow: rgba(0, 0, 0, 0.253) 5px 8px 20px;
+}
+.vendorLogbg .loginbox .vendorLoginFM .signupT button:active {
+  box-shadow: 0 5px rgba(0, 0, 0, 0.274);
+  transform: translateY(4px);
+}
+.vendorLogbg .loginbox .vendorLoginFM .loginFvendor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 18vw;
+}
+.vendorLogbg .loginbox .vendorLoginFM .loginFvendor h1,
+.vendorLogbg .loginbox .vendorLoginFM .loginFvendor p,
+.vendorLogbg .loginbox .vendorLoginFM .loginFvendor label {
+  color: black;
+}
+.vendorLogbg .loginbox .vendorLoginFM .loginFvendor h1 {
+  font-size: 25px;
+}
+.vendorLogbg .loginbox .vendorLoginFM .loginFvendor input[type=submit] {
+  background-color: #2952e3;
+  color: white;
+  width: 100%;
+  padding: 8px;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+.vendorLogbg .loginbox .vendorLoginFM .loginFvendor input[type=submit]:hover {
+  transform: scale(1.1);
+}
+.vendorLogbg .loginbox .vendorLoginFM .loginFvendor input[type=tel],
+.vendorLogbg .loginbox .vendorLoginFM .loginFvendor input[type=text],
+.vendorLogbg .loginbox .vendorLoginFM .loginFvendor input[type=password] {
+  color: black;
   padding: 10px;
   width: 100%;
   height: 30px;
@@ -923,6 +1073,63 @@ body.setting .setting a {
   margin-right: 20px;
   font-weight: 600;
 }
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 200px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 10s ease-in-out;
+}
+
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .close:hover {
+  color: #0606d8;
+  transform: scale(1.4);
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
 
 .cpu table {
   border-collapse: collapse;
@@ -949,6 +1156,21 @@ body.setting .setting a {
   border: black 2px solid;
 }
 .gpu table tr td {
+  text-align: center;
+}
+
+.mot {
+  margin-top: 20px;
+}
+.mot table {
+  border-collapse: collapse;
+  border: black 2px solid;
+  width: 60vw;
+}
+.mot table thead {
+  border: black 2px solid;
+}
+.mot table tr td {
   text-align: center;
 }
 
@@ -1058,9 +1280,11 @@ body.setting .setting a {
   width: 100%;
   text-align: center;
 }
+.bodyA .sidebarA ul a {
+  text-decoration: none;
+}
 .bodyA .sidebarA ul li {
   width: 100%;
-  border: solid grey 1px;
   padding: 10px 10px;
 }
 .bodyA .mainA {

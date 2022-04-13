@@ -33,7 +33,7 @@
         </header>
 
     <div class="body">
-        <form action="pcbuilder.php" method="post">
+        <form action="/server/order.php" method="post">
             <div class="PcContainer">  
                 <div class="core">
                     <div class="heading"><p> Core Component</p></div>
@@ -200,10 +200,11 @@
                 </div>
             </div>
             <div class="pc">
-                <img src="img/PC.png" alt="">
-                <p>Price:</p>
+                <img src="img/PC.png" alt=""><br>
+                <!-- <p>Price:</p>
                 <p>Power Comsumption:</p>
-                <p>Power Supply: </p>
+                <p>Power Supply: </p> -->
+                <input type="submit" value="Order">
             </div>
         </form>
        
@@ -252,7 +253,7 @@
                 success: function(data){
                     console.log(data);
                    $.each(data,function(index,value){
-                     select+=`<option value="${value.model}">${value.model}</option>`;
+                     select+=`<option value="${value.cppuId}">${value.model}</option>`;
                        
                     //    $("#CPUmodel").html(`<option value="${value.model}">${value.model}</option>`);
                    });

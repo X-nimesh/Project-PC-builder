@@ -1,0 +1,119 @@
+.vendorLogbg {
+  background-color: rgb(234, 252, 255);
+  //   background-color: rgb(219, 242, 255);
+  width: 100vw;
+  height: fit-content;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .loginbox {
+    background-color: white;
+    width: fit-content;
+    border-radius: 5px;
+    overflow: hidden;
+    height: fit-content;
+    // display: flex;
+    // align-items: center;
+    .Lphoto {
+      margin-bottom: -1px;
+    }
+    .vendorLoginFM {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      //   margin: 0 0px;
+      gap: 50px;
+      padding: 20px;
+      padding-bottom: 30px;
+      .signupT {
+        display: flex;
+        // flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        align-items: center;
+        width: 20vw;
+        padding-top: 20px;
+
+        gap: 10px;
+        p {
+          color: black;
+          font-weight: 600;
+          font-size: 15px;
+        }
+        button {
+          padding: 7px 9px;
+          color: rgb(255, 255, 255);
+          background-color: $btncolor;
+          font-weight: 600;
+          font-size: 14px;
+          border-radius: 5px;
+          border: none;
+          transition: all 0.2s;
+          &:hover {
+            background-color: #0008ff;
+            transform: scale(1.2);
+            box-shadow: rgba(0, 0, 0, 0.253) 5px 8px 20px;
+          }
+          &:active {
+            // background-color: white;
+            // box-shadow: rgba(0, 0, 0, 0.253) 0px 0px 0px;
+            // transform: translateX(1);
+            box-shadow: 0 5px rgba(0, 0, 0, 0.274);
+            transform: translateY(4px);
+          }
+        }
+      }
+      .loginFvendor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 18vw;
+        h1,
+        p,
+        label {
+          color: black;
+        }
+        h1 {
+          font-size: 25px;
+        }
+        input[type="submit"] {
+          background-color: #2952e3;
+          color: white;
+          width: 100%;
+          padding: 8px;
+          margin-top: 20px;
+          font-weight: 600;
+          font-size: 18px;
+          border: none;
+          border-radius: 10px;
+          transition: all 0.2s;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+        input[type="tel"],
+        input[type="text"],
+        input[type="password"] {
+          color: black;
+          padding: 10px;
+          width: 100%;
+          height: 30px;
+          border-radius: 10px;
+          margin: 8px 0;
+        }
+
+        form {
+          width: 100%;
+          label {
+            margin-left: 5px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}

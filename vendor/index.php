@@ -14,7 +14,7 @@
                 <img src="../img/vendorSignup.png" alt="">
             </div>
             <div class="vendorLoginFM">
-                <div class="signupT"><p>Don't a Vendor yet? </p> <button>Register</button></div>
+                <div class="signupT"><p>Don't a Vendor yet? </p> <a href="signupVendor.php"><button>Register</button></a></div>
                 <div class="loginFvendor">
                     <h1>Hello! Welcome back</h1>
                     <p>Log in wìth your to that you entered
