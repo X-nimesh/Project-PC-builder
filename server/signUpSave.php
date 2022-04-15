@@ -14,7 +14,7 @@ include './conn.php';
         }
         else{
             // echo "Value inserted";
-        header('location:login.php?success=true');//redirect to form
+        header('location:../LoginPage.php?success=true');//redirect to form
         echo '<script>alert("Signup Successful");</script>';
         }
 

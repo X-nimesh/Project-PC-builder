@@ -3,9 +3,10 @@
 include '../conn.php';
 
 $comp=$_POST['comp'];
+// echo $comp;
 // $id=$_POST['id'];
 
-$sql="SELECT DISTINCT model FROM motherboard WHERE company='$comp';";
+$sql="SELECT DISTINCT model,motId,price,support FROM motherboard WHERE company='$comp';";
 $res= mysqli_query($conn,$sql);
 $model=[];
 if(mysqli_num_rows($res)>0){

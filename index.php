@@ -23,7 +23,7 @@
             if(!empty($_GET['success'])){
                 ?>
                 <div class="successh" role="alert">
-                Registered Successfully
+                Logged in Successfully
                 </div>
             <?php
             }

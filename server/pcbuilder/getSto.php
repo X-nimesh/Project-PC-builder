@@ -5,7 +5,7 @@ include '../conn.php';
 $typ=$_POST['typ'];
 // $id=$_POST['id'];
 
-$sql="SELECT DISTINCT model,price FROM storage WHERE driveType='$typ';";
+$sql="SELECT DISTINCT model,price,stoid FROM storage WHERE driveType='$typ';";
 $res= mysqli_query($conn,$sql);
 $model=[];
 if(mysqli_num_rows($res)>0){

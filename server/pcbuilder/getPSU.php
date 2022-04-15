@@ -6,7 +6,7 @@ $pow=$_POST['pow'];
 // echo $comp;
 // $id=$_POST['id'];
 
-$sql="SELECT DISTINCT model,price FROM psu WHERE output='$pow';";
+$sql="SELECT DISTINCT model,price,psuId,output FROM psu WHERE output='$pow';";
 $res= mysqli_query($conn,$sql);
 $model=[];
 if(mysqli_num_rows($res)>0){

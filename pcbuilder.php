@@ -60,7 +60,8 @@
 
                                 
                                 <select name="CPUmodel" id="CPUmodel">
-                                    <option value="" selected disabled hidden>Model</option>
+                                    <option id="cpumodelselect" value="" selected disabled hidden>Model</option>
+                                    <!-- <option value="" class="cpuO"></option> -->
                                    
                                     <!-- <option value="i9900k">Intel i9-9900k</option> -->
                                 </select>
@@ -68,7 +69,7 @@
                         </div>
                     
                         <div class="compo">
-                            <p>Ram</p>
+                            <p>RAM</p>
                             <div class="option">
                                 <select name="RAMsiz" id="RAMsiz" >
                                     <option value="" selected disabled hidden>Size</option>
@@ -86,7 +87,9 @@
                                 </select>
                                 
                                 <select name="RAMmodel" id="RAMmodel">
-                                    <option value="" selected disabled hidden>Model</option>
+                                    <option id="ramModel" value="" selected disabled hidden>Model</option>
+                                   
+                                    
                                     <!-- <option value="i9900k">Intel i9-9900k</option> -->
                                 </select>
                             </div>
@@ -113,7 +116,7 @@
                                 </select>
                                 
                                 <select name="GPUmodel" id="GPUmodel">
-                                    <option value="" selected disabled hidden>Model</option>
+                                    <option id="gpumodelselect" value="" selected disabled hidden>Model</option>
                                    
                                 </select>
                             </div>
@@ -137,8 +140,7 @@
                                 </select>
                                 
                                 <select name="PSUmodel" id="PSUmodel">
-                                    <option value="" selected disabled hidden>Model</option>
-                                   
+                                    <option id="psumodelselect" value="" selected disabled hidden>Model</option>                                   
                                 </select>
                             </div>
                         </div>
@@ -158,15 +160,15 @@
                                         $res= mysqli_query($conn,$sql);
                                         while($row=mysqli_fetch_assoc($res)){
                                             $out=$row['company'];
-                                            // echo "<option value=$out>$out</option>"; 
+                                            echo "<option value=$out>$out</option>"; 
                                         }  
                                     ?>
                                    
                                 </select>
                                 
                                 <select name="Mmodel" id="Mmodel">
-                                    <option value="" selected disabled hidden>Model</option>
-                                   
+                                    <option id="motmodelselect" value="" selected disabled hidden>Model</option>
+                                    
                                 </select>
                             </div> 
                         </div>
@@ -190,7 +192,8 @@
                                 </select>
                                 
                                 <select name="Stmodel" id="Stmodel">
-                                    <option value="" selected disabled hidden>Model</option>
+                                    <option id="stomodelselect" value="" selected disabled hidden>Model</option>
+                                    
                                     
                                 </select>
                             </div>
@@ -204,6 +207,15 @@
                 <!-- <p>Price:</p>
                 <p>Power Comsumption:</p>
                 <p>Power Supply: </p> -->
+               <div class="detail"> 
+                       <div class="price">Price: <div id="Tprice">0</div></div>
+                                       <h1> storage ko bakii cha</h1> 
+                       <div>Power Consumption: <div class="power powerC">0</div></div>
+                      <div>Power Supply:<div class="power powerS">0</div></div>
+                      <div>Power Difference:<div class="power powerDif">0</div></div>
+                       <div>CPU Compatibility:<div class="comp"> Compatible</div></div>
+                 
+                </div>
                 <input type="submit" value="Order">
             </div>
         </form>
@@ -216,10 +228,11 @@
     
     <script src="script.js"></script>
     <script src="jquery.js" type='text/javascript'></script>
+    <!-- menu login -->
     <script >
     
         let profile=document.getElementById('nav');
-       
+
         let signup = document.getElementById("signupB");
        
         // document.getElementById('signupB').style.display = "none";
@@ -234,11 +247,9 @@
         }
         
     </script>
+    <!-- ajax option model -->
     <script>
-        let PowSupply=0;
-        let totalPrice,cpuPrice,gpuPrice;
-        let price=[];
-        let powerConsump=0;
+      
         //for CPU
         $('#CPUcompany').change(function(){
             let company=$('#CPUcompany').val();
@@ -250,14 +261,16 @@
                 url: "server/pcbuilder/getCPU.php",
                 dataType:'json',
                 data:{'comp':company},
+                                 
                 success: function(data){
+                    select=`<option value="" selected disabled hidden>Model</option>`;
                     console.log(data);
                    $.each(data,function(index,value){
-                     select+=`<option value="${value.cppuId}">${value.model}</option>`;
+                     select+=`<option class="cpuO" value="${value.cpuId}">${value.model}</option>`;
                        
                     //    $("#CPUmodel").html(`<option value="${value.model}">${value.model}</option>`);
                    });
-                   
+                //    $(select).insertAfter("#cpumodelselect");
                  $("#CPUmodel").html(select);
                     
                 }
@@ -275,13 +288,16 @@
                dataType:'json',
                data:{'siz':siz},
                success: function(data){
+                select=`<option value="" selected disabled hidden>Model</option>`;
                    console.log(data);
                   $.each(data,function(index,value){
-                    select+=`<option value="${value.model}">${value.model}</option>`;
+                    select+=`<option value="${value.ramid}">${value.model}</option>`;
                     
                     // $("#RAMmodel").html(`<option value="${value.model}">${value.model}</option>`);
                 });
                 $("#RAMmodel").html(select);
+                // $(select).insertAfter("#ramumodelselect");
+
                }
            });
 
@@ -298,13 +314,16 @@
                data:{'comp':comp},
 
                success: function(data){
+                select=`<option value="" selected disabled hidden>Model</option>`;
                    console.log(data);
                   $.each(data,function(index,value){
                       console.log(value.model);
-                      select+=`<option value="${value.model}">${value.model}</option>`;
+                      select+=`<option value="${value.gpuId}">${value.model}</option>`;
                     //   $("#GPUmodel").html(`<option value="${value.model}">${value.model}</option>`);
                   });
                     $("#GPUmodel").html(select);
+                //    $(select).insertAfter("#gpumodelselect");
+
                }
            });
         });
@@ -319,13 +338,17 @@
                data:{'pow':pow},
 
                success: function(data){
+                select=`<option value="" selected disabled hidden>Model</option>`;
+
                    console.log(data);
                   $.each(data,function(index,value){
                       console.log(value.model);
-                      select+=`<option value="${value.model}">${value.model}</option>`;
+                      select+=`<option value="${value.psuId}">${value.model}</option>`;
                     //   $("#GPUmodel").html(`<option value="${value.model}">${value.model}</option>`);
                   });
                     $("#PSUmodel").html(select);
+                //    $(select).insertAfter("#psumodelselect");
+
                }
            });
         });
@@ -341,13 +364,18 @@
                data:{'comp':comp},
 
                success: function(data){
+                select=`<option value="" selected disabled hidden>Model</option>`;
+
                    console.log(data);
                   $.each(data,function(index,value){
                       console.log(value.model);
-                      select+=`<option value="${value.model}">${value.model}</option>`;
+                      select+=`<option value="${value.motId}">${value.model}</option>`;
+                      console.log(select);
                     //   $("#GPUmodel").html(`<option value="${value.model}">${value.model}</option>`);
                   });
                     $("#Mmodel").html(select);
+                //    $(select).insertAfter("#motmodelselect");
+
                }
            });
         });
@@ -362,14 +390,18 @@
                data:{'typ':typ},
 
                success: function(data){
+                select=`<option value="" selected disabled hidden>Model</option>`;
                    console.log(data);
                   $.each(data,function(index,value){
                       console.log(value.model);
                       console.log(value.price);
-                      select+=`<option value="${value.model}">${value.model}</option>`;
+                      select+=`<option value="${value.stoid}">${value.model}</option>`;
                     //   $("#GPUmodel").html(`<option value="${value.model}">${value.model}</option>`);
-                  });
-                    $("#Stmodel").html(select);
+                });
+                console.log(select);
+                $("#Stmodel").html(select);
+                //    $(select).insertAfter("#stomodelselect");
+
                }
            });
         });
@@ -377,6 +409,228 @@
 
 
     </script>
-   
+    <!-- ajax price -->
+   <script>
+       // let totalPrice,cpuPrice,gpuPrice;
+        let PowSupply=0;
+        let cpucompany,ramType,ramSupport,cpuSupport='';
+        let price=0;
+        let powerConsump=0;
+
+       $('#CPUmodel').change(function(){
+           let id=$('#CPUmodel').val();
+            //    var select='';
+            console.log("cpu model changed");
+           $.ajax({
+               type:'POST',
+               url: "server/pcbuilder/getPrice.php",
+               dataType:'json',
+               data:{'comp':'cpu',
+            'id':id,
+            'colN':'cpuId',},
+
+               success: function(data){
+                   console.log(data);
+                  $.each(data,function(index,value){
+                      convPrice=value.price.replace('$', '');
+                      power=value.powUsage.replace('W', '');
+
+                      price+=parseInt(convPrice);
+                      powerConsump+=parseInt(power);
+                      console.log(power);
+                      cpucompany=value.company;
+                    //   console.log(cpucompany);
+                    // console.log(value.price);
+                    // console.log(parseInt(convPrice));
+                    console.log(price);
+                    //   console.log(value.model);
+                    //   console.log(value.price);
+                      
+                  });
+                    $("#Tprice").html(price);
+               }
+           });
+        });
+        // ram
+       $('#RAMmodel').change(function(){
+           let id=$('#RAMmodel').val();
+        //    var select='';
+        console.log("ram model changed");
+           $.ajax({
+               type:'POST',
+               url: "server/pcbuilder/getPrice.php",
+               dataType:'json',
+               data:{'comp':'ram',
+                    'id':id,
+                    'colN':'ramId',},
+               success: function(data){
+                   console.log(data);
+                  $.each(data,function(index,value){
+                      convPrice=value.price.replace('$', '');
+                      price+=parseInt(convPrice);
+                      ramType=value.company;
+                      console.log(ramType);
+                    // console.log(value.price);
+                    console.log(convPrice);
+                    //   console.log(value.model);
+                    //   console.log(value.price);
+                      
+                    // console.log("totalPrice"+price);
+                });
+                // $("#Stmodel").html(select);
+                $("#Tprice").html(price);
+
+            }
+        });
+       });
+    //    GPU price and pow
+       $('#GPUmodel').change(function(){
+           let id=$('#GPUmodel').val();
+        //    var select='';
+        console.log("gpu model changed");
+           $.ajax({
+               type:'POST',
+               url: "server/pcbuilder/getPrice.php",
+               dataType:'json',
+               data:{'comp':'gpu',
+                    'id':id,
+                    'colN':'gpuId',},
+               success: function(data){
+                   console.log(data);
+                  $.each(data,function(index,value){
+                      convPrice=value.price.replace('$', '');
+                      price+=parseInt(convPrice);
+
+                      power=value.powUsage.replace('W', '');
+
+                     
+                      powerConsump+=parseInt(power);
+
+                      console.log(powerConsump);
+                    //   PowSupply=value.output;
+                    //   console.log(PowSupply);
+                    // console.log(value.price);
+                    console.log(convPrice);
+                    //   console.log(value.model);
+                    //   console.log(value.price);
+                      
+                    // console.log("totalPrice"+price);
+                });
+                // $("#Stmodel").html(select);
+                $("#Tprice").html(price);
+
+            }
+        });
+       });
+    //    PSU
+       $('#PSUmodel').change(function(){
+           let id=$('#PSUmodel').val();
+        //    var select='';
+        console.log("psu model changed");
+           $.ajax({
+               type:'POST',
+               url: "server/pcbuilder/getPrice.php",
+               dataType:'json',
+               data:{'comp':'psu',
+                    'id':id,
+                    'colN':'psuId',},
+               success: function(data){
+                   console.log(data);
+                  $.each(data,function(index,value){
+                      convPrice=value.price.replace('$', '');
+                      price+=parseInt(convPrice);
+
+                      power=value.output.replace('W', '');
+                     
+                      PowSupply=parseInt(power);
+
+                      console.log(PowSupply);
+                        //   PowSupply=value.output;
+                        //   console.log(PowSupply);
+                        // console.log(value.price);
+                        console.log(convPrice);
+                        //   console.log(value.model);
+                        //   console.log(value.price);
+                        
+                        // console.log("totalPrice"+price);
+                });
+                // $("#Stmodel").html(select);
+                $("#Tprice").html(price);
+
+            }
+        });
+       });
+    //    MOther board
+       $('#Mmodel').change(function(){
+           let id=$('#Mmodel').val();
+        //    var select='';
+        console.log("MOtherBoard model changed");
+           $.ajax({
+               type:'POST',
+               url: "server/pcbuilder/getPrice.php",
+               dataType:'json',
+               data:{'comp':'motherboard',
+                    'id':id,
+                    'colN':'motId',},
+               success: function(data){
+                   console.log(data);
+                  $.each(data,function(index,value){
+
+                      convPrice=value.price.replace('$', '');
+                      price+=parseInt(convPrice);
+                      
+                      cpuSupport=value.support;
+                     ramSupport=value.memType;
+                       console.log(cpuSupport);
+                       console.log(ramSupport);
+                        //   PowSupply=value.output;
+                        //   console.log(PowSupply);
+                        // console.log(value.price);
+                        console.log(convPrice);
+                        //   console.log(value.model);
+                        //   console.log(value.price);
+                        
+                        // console.log("totalPrice"+price);
+                });
+                // $("#Stmodel").html(select);
+                $("#Tprice").html(price);
+
+            }
+        });
+       });
+    //    Storage 
+       $('#Stmodel').change(function(){
+           let id=$('#Stmodel').val();
+        //    var select='';
+        console.log("MOtherBoard model changed");
+           $.ajax({
+               type:'POST',
+               url: "server/pcbuilder/getPrice.php",
+               dataType:'json',
+               data:{'comp':'storage',
+                    'id':id,
+                    'colN':'stoId',},
+               success: function(data){
+                   console.log(data);
+                  $.each(data,function(index,value){
+
+                      convPrice=value.price.replace('$', '');
+                      price+=parseInt(convPrice);
+                      
+            
+                  
+                        console.log(convPrice);
+                        //   console.log(value.model);
+                        //   console.log(value.price);
+                        
+                        // console.log("totalPrice"+price);
+                });
+                $("#Stmodel").html(select);
+                $("#Tprice").html(price);
+
+            }
+        });
+       });
+   </script>
 </body>
 </html>

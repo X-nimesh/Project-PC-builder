@@ -1,6 +1,8 @@
 .body {
   * {
     color: white;
+    margin: 0;
+    padding: 0;
   }
   height: fit-content;
   width: 87vw;
@@ -94,9 +96,37 @@
     position: -webkit-sticky;
     position: fixed;
     top: 125px;
-
+    width: fit-content;
+    .detail {
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      div {
+        // min-width: fit-content;
+        // width: 10vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        // gap: 70px;
+        font-size: 18px;
+        .power {
+          &::after {
+            content: "W";
+          }
+        }
+        div {
+          font-weight: 700;
+        }
+        #Tprice {
+          color: rgb(0, 255, 0);
+          &::before {
+            content: "$";
+          }
+        }
+      }
+    }
     img {
-      width: 350px;
+      width: 320px;
     }
     input {
       padding: 5px 10px;

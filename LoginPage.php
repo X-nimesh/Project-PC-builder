@@ -10,6 +10,40 @@
 </head>
 <body>
     <div class="bg1">
+    <?php
+        if(!empty($_GET)){
+            echo "<div id='top-msg'  class='top-msg'>";
+            if(!empty($_GET['success'])){
+                ?>
+                <div class="successh" role="alert">
+                Registered Successfully
+                </div>
+            <?php
+            }
+            if(!empty($_GET['error'])){
+                ?>
+                <div class="errorh" role="alert">
+                Login credential is wrong
+                </div>
+            <?php
+            }
+            if(!empty($_GET['failed'])){
+                ?>
+                <div class="failh" role="alert">
+                Please login in
+                </div>
+            <?php
+            }
+            if(!empty($_GET['lout'])){
+                ?>
+                <div class="logouth" role="alert">
+                Logged Out Successfully
+                </div>
+            <?php
+            }
+            echo "</div>";
+        }
+    ?>
         <header class="header">
             <div class="container">
                 <div class="logom">

@@ -3,10 +3,14 @@
 include '../conn.php';
 
 $comp=$_POST['comp'];
-// echo $comp;
+$id=$_POST['id'];
+$colName=$_POST['colN'];
 // $id=$_POST['id'];
-
-$sql="SELECT DISTINCT model,powUsage,price,gpuId FROM gpu WHERE company='$comp';";
+// echo $comp;
+// echo $id;
+// echo $colName;
+$sql="SELECT * FROM $comp WHERE $colName='$id' ;";
+// echo $sql;
 $res= mysqli_query($conn,$sql);
 $model=[];
 if(mysqli_num_rows($res)>0){

@@ -5,7 +5,7 @@ include '../conn.php';
 $siz=$_POST['siz'];
 // $id=$_POST['id'];
 
-$sql="SELECT DISTINCT model FROM ram WHERE memsize='$siz';";
+$sql="SELECT DISTINCT model,ramid FROM ram WHERE memsize='$siz';";
 $res= mysqli_query($conn,$sql);
 $model=[];
 if(mysqli_num_rows($res)>0){
