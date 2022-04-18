@@ -9,6 +9,17 @@ body.Aprofile .profile {
     color: #94abff;
   }
 }
+body.Ahome,
+body.Aproducts,
+body.Aorders,
+body.Ausers,
+body.Aprofile {
+  background: radial-gradient(circle, rgb(0, 85, 102) 12%, rgb(3, 0, 47) 100%);
+  * {
+    color: aliceblue;
+  }
+}
+
 .bodyA {
   * {
     color: black;

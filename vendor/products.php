@@ -70,7 +70,7 @@
                                     echo "<td ><a class='btn-edit' 
                                         href='../server/vendorEdit.php?id=".$row['cpuId']."&typ=cpu&idType=cpuId'>Edit</a>||
                                         <a class='btn-delete' 
-                                        href='vendorDelete.php?id=".$row['cpuId']."&typ=cpu&idType=cpuId'>Delete</a></td>";
+                                        href='../server/delete.php?id=".$row['cpuId']."&typ=cpu&idType=cpuId'>Delete</a></td>";
                                     echo "</tr>";
                                 }  
                             }
@@ -119,7 +119,7 @@
                                 echo "<td ><a class='btn-edit' 
                                         href='../server/vendorEdit.php?id=".$Pid."&typ=gpu&idType=gpuId'>Edit</a>||
                                         <a class='btn-delete' 
-                                        href='vendorDelete.php?id=".$Pid."&typ=gpu&idType=gpuId'>Delete</a></td>";
+                                        href='../server/delete.php?id=".$Pid."&typ=gpu&idType=gpuId'>Delete</a></td>";
                                 echo "</tr>";
                             }  
                         ?>    
@@ -160,7 +160,7 @@
                                 echo "<td ><a class='btn-edit' 
                                     href='../server/vendorEdit.php?id=".$Pid."&typ=motherboard&idType=motId'>Edit</a>||
                                     <a class='btn-delete' 
-                                    href='vendorDelete.php?id=".$Pid."&typ=motherboard&idType=motId'>Delete</a></td>";
+                                    href='../server/delete.php?id=".$Pid."&typ=motherboard&idType=motId'>Delete</a></td>";
                                 echo "</tr>";
                             }  
                         ?>    
@@ -204,9 +204,9 @@
                                 echo "<td>$".$row['price']."</td>"; 
                                 echo "<td>".$row['quantity']."</td>"; 
                                 echo "<td ><a class='btn-edit' 
-                                    href='../server/vendorEdit.php?id=".$Pid."&typ=motherboard&idType=ramId'>Edit</a>||
+                                    href='../server/vendorEdit.php?id=".$Pid."&typ=ram&idType=ramId'>Edit</a>||
                                     <a class='btn-delete' 
-                                    href='vendorDelete.php?id=".$Pid."&typ=motherboard&idType=ramId'>Delete</a></td>";
+                                    href='../server/delete.php?id=".$Pid."&typ=ram&idType=ramId'>Delete</a></td>";
                                 echo "</tr>";
                             }  
                         ?>    
@@ -247,9 +247,9 @@
                                 echo "<td>$".$row['price']."</td>"; 
                                 echo "<td>".$row['quantity']."</td>";
                                 echo "<td ><a class='btn-edit' 
-                                    href='../server/vendorEdit.php?id=".$Pid."&typ=storage&idType=ramId'>Edit</a>||
+                                    href='../server/vendorEdit.php?id=".$Pid."&typ=storage&idType=stoId'>Edit</a>||
                                     <a class='btn-delete' 
-                                    href='vendorDelete.php?id=".$Pid."&typ=storage&idType=ramId'>Delete</a></td>";
+                                    href='../server/delete.php?id=".$Pid."&typ=storage&idType=stoId'>Delete</a></td>";
                                  
                                 echo "</tr>";
                             }  
@@ -296,7 +296,7 @@
                                 echo "<td ><a class='btn-edit' 
                                     href='../server/vendorEdit.php?id=".$Pid."&typ=psu&idType=psuId'>Edit</a>||
                                     <a class='btn-delete' 
-                                    href='vendorDelete.php?id=".$Pid."&typ=psu&idType=psuId'>Delete</a></td>";
+                                    href='../server/delete.php?id=".$Pid."&typ=psu&idType=psuId'>Delete</a></td>";
                                 echo "</tr>";
                             }  
                         ?>    
@@ -490,6 +490,12 @@
             });
         });
         
+   </script>
+   <script>
+        $('.btn-delete').on('click',function(){
+           let a= confirm("CLick yes to delete");
+           return a;
+        });
    </script>
 </body>
 </html>
