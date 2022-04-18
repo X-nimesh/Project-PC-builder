@@ -12,7 +12,7 @@ echo $_POST['pass'];
 // echo $pass;
 
 
-$sql="SELECT Name,address,contact,email,uname FROM users WHERE email='$email' or uname='$email' and password='$pass'  ;";
+$sql="SELECT * FROM users WHERE email='$email' or uname='$email' and password='$pass'  ;";
 $res= mysqli_query($conn,$sql);
 // echo $res;
 if(mysqli_num_rows($res)==1){
@@ -25,6 +25,7 @@ if(mysqli_num_rows($res)==1){
         $_SESSION['contact']=$row['contact'];
         $_SESSION['email']=$row['email'];
         $_SESSION['uname']=$row['uname'];
+        $_SESSION['uid']=$row['id'];
        
         
     // }   

@@ -10,24 +10,10 @@
 </head>
 <body>
     <div class="bg1">
-        <header class="header">
-            <div class="container">
-                <div class="logom">
-                    <a href="index.php"><img src="img/edge tech.png" alt="logo" class="logo"></a>
-                </div>
-                
+        <?php
+             include "menu.php";
+        ?>
 
-                    <ul class="nav-bar">
-                        <li class="nav-link"><a href="index.php">Home</a></li>
-                        <li class="nav-link"><a href="pcbuilder.php">PC Builder</a></li>
-                        <li class="nav-link"><a href="shop.php">Shop</a></li>
-                        <li class="nav-link"><a href="signuppage.php">SignUp</a></li>
-                        <li><div class="loginB"><a href="LoginPage.php">Login</a></div></li>
-                    </ul>
-
-                  
-            </div>
-        </header>
         <div class="login">
             <div class="containermain">
                 <form class="signupF" action="server/signUpSave.php" method="post">

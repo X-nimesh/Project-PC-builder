@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../style/style1.css">
     <title>Admin Page</title>
 </head>
-<body>
+<body class="Ahome">
    <div class="bodyA">
         <?php
             include "adminNavbar.php";

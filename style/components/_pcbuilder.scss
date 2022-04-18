@@ -101,6 +101,10 @@
       width: 300px;
       display: flex;
       flex-direction: column;
+      .price {
+        font-size: 50px;
+        font-weight: 700;
+      }
       div {
         // min-width: fit-content;
         // width: 10vw;
@@ -117,7 +121,10 @@
         div {
           font-weight: 700;
         }
+
         #Tprice {
+          font-size: 50px;
+
           color: rgb(0, 255, 0);
           &::before {
             content: "$";

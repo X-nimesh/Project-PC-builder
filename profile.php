@@ -16,39 +16,62 @@
     
 
 <div class="bg1">
-        <header class="header">
-            <div class="container">
-                <div class="logom">
-                    <a href="index.php"><img src="img/edge tech.png" alt="logo" class="logo"></a>
+    <?php
+        if(!empty($_GET)){
+            echo "<div id='top-msg'  class='top-msg'>";
+            if(!empty($_GET['success'])){
+                ?>
+                <div class="successh" role="alert">
+                Logged in Successfully
                 </div>
-                    <ul  class="nav-bar">
-                        <div id='nav' class="nav-barIn">
-                            <li class="nav-link"><a href="index.php">Home</a></li>
-                            <li class="nav-link"><a href="pcbuilder.php">PC Builder</a></li>
-                            <li class="nav-link"><a href="shop.php">Shop</a></li>
-                            <li class="nav-link"><a href="contact.php">Contact</a></li>
-                        </div>
-                        <li><div id="btn-main" class="loginB"><a href="LoginPage.php" id="btntxt">Login</a></div></li>
-                    </ul>
-            </div>
-        </header>
-<?php
-//    echo $_SESSION['Name'];
-?>
+            <?php
+            }
+            if(!empty($_GET['error'])){
+                ?>
+                <div class="errorh" role="alert">
+                Login credential is wrong
+                </div>
+            <?php
+            }
+            if(!empty($_GET['failed'])){
+                ?>
+                <div class="failh" role="alert">
+                Please login in
+                </div>
+            <?php
+            }
+            if(!empty($_GET['lout'])){
+                ?>
+                <div class="logouth" role="alert">
+                Logged Out Successfully
+                </div>
+            <?php
+            }
+            echo "</div>";
+        }
+    ?>
+        <?php
+             include "menu.php";
+        ?>
 
-<div class="userbox">
-    <div class="pic">
-        <img src="img/account.png" width=100px alt="user">
+        <?php
+        //    echo $_SESSION['Name'];
+        ?>
+
+    <div class="userbox">
+        <div class="pic">
+            <img src="img/account.png" width=100px alt="user">
+        </div>
+    
+        <div class="details">
+            <p class="name">Id: <?php echo  $_SESSION['uid']?></p>
+            <p class="name">Name: <?php echo $_SESSION['Name']?></p>
+            <p class="email">E-mail: <?php echo $_SESSION['email']?></p>
+            <p class="contact">Contact: <?php echo $_SESSION['contact']?></p>
+            <p class="address">Address: <?php echo $_SESSION['add']?></p>
+        </div>
+    
     </div>
- 
-    <div class="details">
-        <p class="name">Name: <?php echo $_SESSION['Name']?></p>
-        <p class="email">E-mail: <?php echo $_SESSION['email']?></p>
-        <p class="contact">Contact: <?php echo $_SESSION['contact']?></p>
-        <p class="address">Address: <?php echo $_SESSION['add']?></p>
-    </div>
- 
-</div>
 
 </div>
     
@@ -57,16 +80,23 @@
         // let logged_in='<?php echo $_SESSION['uname']; ?>';
         // console.log(logged_in);
         let profile=document.getElementById('nav');
+        
+        let signup = document.getElementById("signupB");
+
         console.log(<?php echo isset($_SESSION['uname'])?>);
         if(<?php echo isset($_SESSION['uname']);?>){
                 document.getElementById('btntxt').innerText = "Log Out";
                 document.getElementById('btntxt').href="server/logOut.php";
                 // document.getElementById('nav').innerHTML += " <li class='nav-link'><a href='/profile.php'>Profile</a></li>";
                 document.getElementById('nav').innerHTML += " <li class='nav-link'><a href='profile.php'><img src='img/account.png' style='margin-top:12px;' width=35px alt='acc'></a></li>";
-            
+                signup.style.display="none";
+
 
                document.getElementById('btn-main').style.backgroundColor = "red";
         }
+            
+
+
     </script>
 </body>
 </html>

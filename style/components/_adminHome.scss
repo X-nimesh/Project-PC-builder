@@ -1,3 +1,14 @@
+body.Ahome .Home,
+body.Aproducts .products,
+body.Aorders .orders,
+body.Ausers .users,
+body.Aprofile .profile {
+  // background-color: rgb(255, 255, 255);
+  border-right: 10px solid #2952e3;
+  a {
+    color: #94abff;
+  }
+}
 .bodyA {
   * {
     color: black;

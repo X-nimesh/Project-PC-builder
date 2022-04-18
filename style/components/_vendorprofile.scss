@@ -1,0 +1,44 @@
+.profileV {
+  //   margin-top: 40px;
+  // position: static;
+  //   margin-left: 25vw;
+  margin-left: auto;
+  width: 80vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    45deg,
+    #304091 0%,
+    #8f3a89 46%,
+    #bd9752 100%
+  );
+
+  .vendorProfile {
+    // margin-top: 300px;
+    width: 30vw;
+    min-height: fit-content;
+    height: 400px;
+    background-color: black;
+    text-align: center;
+    border-radius: 50px;
+    * {
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      font-family: Helvetica;
+    }
+    .details {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    img {
+      width: 150px;
+      margin-top: -70px;
+    }
+  }
+}

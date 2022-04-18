@@ -509,6 +509,10 @@ body {
   display: flex;
   flex-direction: column;
 }
+.body .pc .detail .price {
+  font-size: 50px;
+  font-weight: 700;
+}
 .body .pc .detail div {
   display: flex;
   flex-direction: row;
@@ -522,6 +526,7 @@ body {
   font-weight: 700;
 }
 .body .pc .detail div #Tprice {
+  font-size: 50px;
   color: rgb(0, 255, 0);
 }
 .body .pc .detail div #Tprice::before {
@@ -1013,14 +1018,19 @@ img {
 body.dashboard .dashboard,
 body.products .products,
 body.orders .orders,
-body.setting .setting {
+body.profile .profile {
   border-right: 10px solid #2952e3;
 }
 body.dashboard .dashboard a,
 body.products .products a,
 body.orders .orders a,
-body.setting .setting a {
+body.profile .profile a {
   color: #94abff;
+}
+
+.vendorLO {
+  background-color: red !important;
+  margin: 0 auto;
 }
 
 .bodyV {
@@ -1140,7 +1150,7 @@ body.setting .setting a {
 }
 
 .popup {
-  margin: 200px auto;
+  margin: 100px auto;
   padding: 20px;
   background: #fff;
   border-radius: 5px;
@@ -1170,47 +1180,115 @@ body.setting .setting a {
   overflow: auto;
 }
 
-.cpu table {
-  border-collapse: collapse;
-  border: black 2px solid;
-  width: 60vw;
+.popup form .titleA {
+  font-size: 18px;
+  font-weight: 700;
+  color: #006f9f;
 }
-.cpu table thead {
-  border: black 2px solid;
+.popup form input[type=button] {
+  width: 100%;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 15px;
+  font-weight: 700;
 }
-.cpu table tr td {
-  text-align: center;
+.popup form div {
+  width: 100%;
+}
+.popup form div h3 {
+  margin-bottom: 10px;
+}
+.popup form div label {
+  margin-top: 10px;
+  font-weight: 400;
+}
+.popup form div input {
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 15px;
+  height: 30px;
+}
+.popup form .catpop {
+  background-color: rgb(236, 236, 236);
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  padding-right: 40px !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.popup form .catpop * {
+  font-weight: 500;
 }
 
-.gpu {
-  margin-top: 20px;
+option {
+  padding: 0 5px;
+  height: 100px;
 }
 
-.gpu table {
+table {
+  margin-bottom: 30px;
+  margin-top: 5px;
   border-collapse: collapse;
   border: black 2px solid;
-  width: 60vw;
+  width: 70vw;
 }
-.gpu table thead {
+table thead {
   border: black 2px solid;
 }
-.gpu table tr td {
+table tr td {
+  height: 30px !important;
   text-align: center;
+}
+table tbody tr td {
+  text-align: center;
+  height: 40px !important;
 }
 
-.mot {
-  margin-top: 20px;
+.btn-edit {
+  background-color: rgb(0, 141, 0);
+  padding: 4px 15px;
+  margin: 2px;
+  margin-right: 20px;
+  margin-left: -5px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 1px 1px 2px black;
 }
-.mot table {
-  border-collapse: collapse;
-  border: black 2px solid;
-  width: 60vw;
+.btn-edit:hover {
+  background-color: rgb(0, 167, 0);
+  box-shadow: 2px 2px 5px black;
 }
-.mot table thead {
-  border: black 2px solid;
+.btn-edit:active {
+  box-shadow: 0 0 0 black;
 }
-.mot table tr td {
-  text-align: center;
+
+.btn-delete {
+  background-color: rgb(255, 0, 0);
+  padding: 4px 15px;
+  margin: 2px;
+  margin-right: -10px;
+  margin-left: 15px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 1px 1px 2px black;
+}
+.btn-delete:hover {
+  background-color: rgb(201, 0, 0);
+  box-shadow: 2px 2px 5px black;
+}
+.btn-delete:active {
+  box-shadow: 0 0 0 black;
 }
 
 .adminbg {
@@ -1286,6 +1364,21 @@ body.setting .setting a {
   width: 12%;
 }
 
+body.Ahome .Home,
+body.Aproducts .products,
+body.Aorders .orders,
+body.Ausers .users,
+body.Aprofile .profile {
+  border-right: 10px solid #2952e3;
+}
+body.Ahome .Home a,
+body.Aproducts .products a,
+body.Aorders .orders a,
+body.Ausers .users a,
+body.Aprofile .profile a {
+  color: #94abff;
+}
+
 .bodyA {
   height: 100vh;
   min-height: -webkit-fit-content;
@@ -1349,6 +1442,43 @@ body.setting .setting a {
 .bodyA .mainA .productsEnlisted .productsAdmin .categoryH li p {
   margin-right: 20px;
   font-weight: 600;
+}
+
+.profileV {
+  margin-left: auto;
+  width: 80vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4158d0;
+  background-image: linear-gradient(45deg, #304091 0%, #8f3a89 46%, #bd9752 100%);
+}
+.profileV .vendorProfile {
+  width: 30vw;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  height: 400px;
+  background-color: black;
+  text-align: center;
+  border-radius: 50px;
+}
+.profileV .vendorProfile * {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Helvetica;
+}
+.profileV .vendorProfile .details {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.profileV .vendorProfile img {
+  width: 150px;
+  margin-top: -70px;
 }
 
 .top-msg {

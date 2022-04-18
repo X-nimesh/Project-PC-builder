@@ -12,9 +12,9 @@
             
             // print_r($row);
             $_SESSION['Name']=$row['Name'];
-            $_SESSION['add']=$row['address'];
-            $_SESSION['contact']=$row['contact'];
-            $_SESSION['email']=$row['email'];
+            $_SESSION['Add']=$row['address'];
+            $_SESSION['Contact']=$row['contact'];
+            $_SESSION['Email']=$row['email'];
             $_SESSION['vid']=$row['vid'];
 
             // $_SESSION['uname']=$row['uname'];

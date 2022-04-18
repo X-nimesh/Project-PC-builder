@@ -15,25 +15,12 @@
 </head>
 <body>
     <div class="bg1">
-        <header class="header">
-            <div class="container">
-                <div class="logom">
-                    <a href="index.php"><img src="img/edge tech.png" alt="logo" class="logo"></a>
-                </div>
-                    <ul  class="nav-bar">
-                        <div id='nav' class="nav-barIn">
-                            <li class="nav-link"><a href="index.php">Home</a></li>
-                            <li class="nav-link"><a href="pcbuilder.php">PC Builder</a></li>
-                            <li class="nav-link"><a href="contact.php">Contact</a></li>
-                        </div>
-                        <li><div id="btn-main" class="loginB"><a href="LoginPage.php" id="btntxt">Login</a></div></li>
-                        <li><div  class="signup" id="signupB"><a href="signuppage.php" >Sign Up</a></div></li>
-                    </ul>
-            </div>
-        </header>
+       <?php
+        include "menu.php";
+        ?>
 
     <div class="body">
-        <form action="/server/order.php" method="post">
+        <form action="server/order.php" method="post">
             <div class="PcContainer">  
                 <div class="core">
                     <div class="heading"><p> Core Component</p></div>
@@ -208,15 +195,14 @@
                 <p>Power Comsumption:</p>
                 <p>Power Supply: </p> -->
                <div class="detail"> 
-                       <div class="price">Price: <div id="Tprice">0</div></div>
-                                       <h1> storage ko bakii cha</h1> 
+                       <div class="price">Price: <div name="price" id="Tprice">0</div></div>
                        <div>Power Consumption: <div class="power powerC">0</div></div>
                       <div>Power Supply:<div class="power powerS">0</div></div>
                       <div>Power Difference:<div class="power powerDif">0</div></div>
-                       <div>CPU Compatibility:<div class="comp"> Compatible</div></div>
+                       <div>CPU Compatibility:<div class="comp"> UnCompatible</div></div>
                  
                 </div>
-                <input type="submit" value="Order">
+                <input type="submit" id="submit" value="Order">
             </div>
         </form>
        
@@ -225,7 +211,11 @@
 
     </div>
 
-    
+    <script>
+         $('#submit').change(function(){
+            <?php ?>
+        });
+    </script>
     <script src="script.js"></script>
     <script src="jquery.js" type='text/javascript'></script>
     <!-- menu login -->
@@ -414,12 +404,16 @@
        // let totalPrice,cpuPrice,gpuPrice;
         let PowSupply=0;
         let cpucompany,ramType,ramSupport,cpuSupport='';
-        let price=0;
-        let powerConsump=0;
+       let powerC=[];
+        let price=[];
+        let Tprice=0;
+        let sum=0;
+        let TpowerC=0;
 
        $('#CPUmodel').change(function(){
            let id=$('#CPUmodel').val();
             //    var select='';
+           
             console.log("cpu model changed");
            $.ajax({
                type:'POST',
@@ -432,22 +426,41 @@
                success: function(data){
                    console.log(data);
                   $.each(data,function(index,value){
+                     
                       convPrice=value.price.replace('$', '');
                       power=value.powUsage.replace('W', '');
+                        //  cpu=parseInt(convPrice);
+                        //  try
+                        //  price[1]=45;
+                        TpowerC=0;
+                        powerC[0]=parseInt(power);
+                        powerC.map(x=>TpowerC+=x);
+                        console.log(power);
+                        console.log('total Power='+TpowerC);
 
-                      price+=parseInt(convPrice);
-                      powerConsump+=parseInt(power);
-                      console.log(power);
+                        sum=0;
+                         price[0]=parseInt(convPrice);
+                         price.map(x=>sum+=x);
+                        console.log(sum);
+                        // Tprice=cpu+ram+gpu+psu+mot+sto;
+                    //   price+=parseInt(convPrice);
+                    //   powerConsump+=parseInt(power);
+                    //   console.log(power);
                       cpucompany=value.company;
-                    //   console.log(cpucompany);
-                    // console.log(value.price);
-                    // console.log(parseInt(convPrice));
-                    console.log(price);
-                    //   console.log(value.model);
-                    //   console.log(value.price);
-                      
+                  
+                    console.log('sum='+sum);
+                    
+                    if(cpuSupport==cpucompany){
+                         $(".comp").text("Compatible");
+                         
+                        }
+                        else{
+                         $(".comp").text("UnCompatible");
+
+                     }
                   });
-                    $("#Tprice").html(price);
+                    $("#Tprice").html(sum);
+                    $(".powerC").html(TpowerC);
                }
            });
         });
@@ -467,18 +480,26 @@
                    console.log(data);
                   $.each(data,function(index,value){
                       convPrice=value.price.replace('$', '');
-                      price+=parseInt(convPrice);
+                    //   price+=parseInt(convPrice);
+                    //   ram=parseInt(convPrice);
+                    //   Tprice=cpu+ram+gpu+psu+mot+sto;
+                        sum=0;
+                         price[1]=parseInt(convPrice);
+                         price.map(x=>sum+=x);
+
                       ramType=value.company;
                       console.log(ramType);
                     // console.log(value.price);
                     console.log(convPrice);
+                    console.log('sum='+sum);
+
                     //   console.log(value.model);
                     //   console.log(value.price);
                       
                     // console.log("totalPrice"+price);
                 });
                 // $("#Stmodel").html(select);
-                $("#Tprice").html(price);
+                $("#Tprice").html(sum);
 
             }
         });
@@ -499,25 +520,36 @@
                    console.log(data);
                   $.each(data,function(index,value){
                       convPrice=value.price.replace('$', '');
-                      price+=parseInt(convPrice);
+                    //   gpu=parseInt(convPrice);
+                    //   Tprice=cpu+ram+gpu+psu+mot+sto;
+                        sum=0;
+                         price[2]=parseInt(convPrice);
+                         price.map(x=>sum+=x);
 
                       power=value.powUsage.replace('W', '');
 
+                        TpowerC=0;
+                        powerC[1]=parseInt(power);
+                        powerC.map(x=>TpowerC+=x);
+                        console.log(power);
+                        console.log('total Power='+TpowerC);
                      
-                      powerConsump+=parseInt(power);
+                    //   powerConsump+=parseInt(power);
 
-                      console.log(powerConsump);
+                    //   console.log(powerConsump);
                     //   PowSupply=value.output;
                     //   console.log(PowSupply);
                     // console.log(value.price);
                     console.log(convPrice);
+                    console.log('sum='+sum);
                     //   console.log(value.model);
                     //   console.log(value.price);
                       
                     // console.log("totalPrice"+price);
                 });
                 // $("#Stmodel").html(select);
-                $("#Tprice").html(price);
+                $("#Tprice").html(sum);
+                $(".powerC").html(TpowerC);
 
             }
         });
@@ -538,7 +570,10 @@
                    console.log(data);
                   $.each(data,function(index,value){
                       convPrice=value.price.replace('$', '');
-                      price+=parseInt(convPrice);
+                    //   price+=parseInt(convPrice);
+                         sum=0;
+                         price[3]=parseInt(convPrice);
+                         price.map(x=>sum+=x);
 
                       power=value.output.replace('W', '');
                      
@@ -549,14 +584,17 @@
                         //   console.log(PowSupply);
                         // console.log(value.price);
                         console.log(convPrice);
+                    console.log('sum='+sum);
+
                         //   console.log(value.model);
                         //   console.log(value.price);
                         
                         // console.log("totalPrice"+price);
                 });
                 // $("#Stmodel").html(select);
-                $("#Tprice").html(price);
-
+                $("#Tprice").html(sum);
+                $(".powerS").html(PowSupply);
+                powerD();
             }
         });
        });
@@ -577,23 +615,36 @@
                   $.each(data,function(index,value){
 
                       convPrice=value.price.replace('$', '');
-                      price+=parseInt(convPrice);
+                    //   price+=parseInt(convPrice);
+                            sum=0;
+                         price[4]=parseInt(convPrice);
+                         price.map(x=>sum+=x);
                       
                       cpuSupport=value.support;
                      ramSupport=value.memType;
+                     if(cpuSupport==cpucompany){
+                         $(".comp").text("Compatible");
+                         
+                        }
+                        else{
+                         $(".comp").text("UnCompatible");
+
+                     }
                        console.log(cpuSupport);
                        console.log(ramSupport);
                         //   PowSupply=value.output;
                         //   console.log(PowSupply);
                         // console.log(value.price);
                         console.log(convPrice);
+                    console.log('sum='+sum);
+
                         //   console.log(value.model);
                         //   console.log(value.price);
                         
                         // console.log("totalPrice"+price);
                 });
                 // $("#Stmodel").html(select);
-                $("#Tprice").html(price);
+                $("#Tprice").html(sum);
 
             }
         });
@@ -615,22 +666,40 @@
                   $.each(data,function(index,value){
 
                       convPrice=value.price.replace('$', '');
-                      price+=parseInt(convPrice);
-                      
-            
+                    //   price+=parseInt(convPrice);
+                         sum=0;
+                         price[5]=parseInt(convPrice);
+                         price.map(x=>sum+=x);
+
+                         console.log(convPrice);
+                         console.log('sum='+sum);
+                    
                   
-                        console.log(convPrice);
+                        // console.log(price);
                         //   console.log(value.model);
                         //   console.log(value.price);
                         
                         // console.log("totalPrice"+price);
                 });
-                $("#Stmodel").html(select);
-                $("#Tprice").html(price);
+                // $("#Stmodel").html(select);
+                $("#Tprice").html(sum);
 
             }
         });
        });
+      function powerD(){
+           console.log("powerC,sda");
+           let powerC=$('.powerC').text();
+           let powerS=$('.powerS').text();
+           let powerDiff=parseInt(powerS)-parseInt(powerC);
+        //    console.log(" power"+powerC+" S "+powerS+" D "+powerDiff);
+            $(".powerDif").html(powerDiff);
+            if(powerDiff>0){
+                $(".powerDif").css('color','lime');
+            }else{
+                $(".powerDif").css('color','red');
+            }
+       };
    </script>
 </body>
 </html>
