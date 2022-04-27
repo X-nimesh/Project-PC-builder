@@ -504,13 +504,16 @@ body {
   width: -moz-fit-content;
   width: fit-content;
 }
+.body .pc img {
+  width: 250px;
+}
 .body .pc .detail {
   width: 300px;
   display: flex;
   flex-direction: column;
 }
 .body .pc .detail .price {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 700;
 }
 .body .pc .detail div {
@@ -531,9 +534,6 @@ body {
 }
 .body .pc .detail div #Tprice::before {
   content: "$";
-}
-.body .pc img {
-  width: 320px;
 }
 .body .pc input {
   padding: 5px 10px;
@@ -1232,21 +1232,21 @@ option {
   height: 100px;
 }
 
-table {
+.mainTable table {
   margin-bottom: 30px;
   margin-top: 5px;
   border-collapse: collapse;
   border: black 2px solid;
   width: 70vw;
 }
-table thead {
+.mainTable table thead {
   border: black 2px solid;
 }
-table tr td {
+.mainTable table tr td {
   height: 30px !important;
   text-align: center;
 }
-table tbody tr td {
+.mainTable table tbody tr td {
   text-align: center;
   height: 40px !important;
 }
@@ -1405,6 +1405,7 @@ body.Ahome .Home,
 body.Aproducts .products,
 body.Aorders .orders,
 body.Ausers .users,
+body.Avendors .vendors,
 body.Aprofile .profile {
   border-right: 10px solid #2952e3;
 }
@@ -1412,6 +1413,7 @@ body.Ahome .Home a,
 body.Aproducts .products a,
 body.Aorders .orders a,
 body.Ausers .users a,
+body.Avendors .vendors a,
 body.Aprofile .profile a {
   color: #94abff;
 }
@@ -1420,6 +1422,7 @@ body.Ahome,
 body.Aproducts,
 body.Aorders,
 body.Ausers,
+body.Avendors,
 body.Aprofile {
   background: radial-gradient(circle, rgb(0, 85, 102) 12%, rgb(3, 0, 47) 100%);
 }
@@ -1427,6 +1430,7 @@ body.Ahome *,
 body.Aproducts *,
 body.Aorders *,
 body.Ausers *,
+body.Avendors *,
 body.Aprofile * {
   color: aliceblue;
 }
@@ -1474,7 +1478,7 @@ body.Aprofile * {
 .bodyA .mainA {
   margin-top: 40px;
   margin-left: 25vw;
-  height: 200vh;
+  height: 100vh;
 }
 .bodyA .mainA .productsEnlisted {
   margin-top: 40px;
@@ -1494,6 +1498,25 @@ body.Aprofile * {
 .bodyA .mainA .productsEnlisted .productsAdmin .categoryH li p {
   margin-right: 20px;
   font-weight: 600;
+}
+
+.mainTableA table {
+  margin-bottom: 30px;
+  margin-top: 5px;
+  border-collapse: collapse;
+  border: rgb(135, 229, 255) 2px solid;
+  width: 70vw;
+}
+.mainTableA table thead {
+  border: rgb(135, 229, 255) 2px solid;
+}
+.mainTableA table tr td {
+  height: 30px !important;
+  text-align: center;
+}
+.mainTableA table tbody tr td {
+  text-align: center;
+  height: 40px !important;
 }
 
 .top-msg {

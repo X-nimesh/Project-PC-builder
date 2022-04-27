@@ -12,7 +12,7 @@
     <title>Products</title>
     <link rel="stylesheet" href="../style/style1.css">
 </head>
-<body class="Aorders">
+<body class="Avendors">
 
    <div class="bodyA">
         <?php
@@ -35,37 +35,33 @@
                             <table border="1">
                                 <thead>
                                     <tr>
-                                        <td> Cpu ID</td>
-                                        <td> Company</td>
-                                        <td> Model</td>
-                                        <td> Frequency</td>
-                                        <td> Power Usage</td>
-                                        <td> Quantity</td>
-                                        <td> Price</td>
-                                        <td> Operation</td>
+                                        <td> Vendor ID</td>
+                                        <td> Name</td>
+                                        <td> Address</td>
+                                        <td> Contact</td>
+                                        <td> E-mail/td>
+                                       
                                     </tr>
                                 </thead>
                             <tr>
                             <?php
                                 include "../conn.php";    
                                 $id=$_SESSION['vid'];
-                                $sql="SELECT  * FROM cpu ";
+                                $sql="SELECT  * FROM vendor ";
                                 $res= mysqli_query($conn,$sql);
                                 if(mysqli_num_rows($res)>0){
                                     while($row=mysqli_fetch_assoc($res)){
 
-                                        $com=$row['company'];
-                                        echo "<td>".$row['cpuId']."</td>"; 
-                                        echo "<td>".$com."</td>"; 
-                                        echo "<td>".$row['model']."</td>"; 
-                                        echo "<td>".$row['freq']."</td>"; 
-                                        echo "<td>".$row['powUsage']."</td>"; 
-                                        echo "<td>".$row['quantity']."</td>"; 
-                                        echo "<td>$".$row['price']."</td>"; 
+                                        echo "<td>".$row['vid']."</td>"; 
+                                        echo "<td>".$row['Name']."</td>"; 
+                                        echo "<td>".$row['address']."</td>"; 
+                                        echo "<td>".$row['contact']."</td>"; 
+                                        echo "<td>".$row['email']."</td>"; 
+                                       
                                         echo "<td ><a class='btn-edit' 
-                                            href='../server/vendorEdit.php?id=".$row['cpuId']."&typ=cpu&idType=cpuId'>Edit</a>||
+                                            href='../server/vendorEdit.php?id=".$row['vid']."&typ=cpu&idType=cpuId'>Edit</a>||
                                             <a class='btn-delete' 
-                                            href='../server/delete.php?id=".$row['cpuId']."&typ=cpu&idType=cpuId'>Delete</a></td>";
+                                            href='../server/delete.php?id=".$row['vid']."&typ=cpu&idType=cpuId'>Delete</a></td>";
                                         echo "</tr>";
                                     }  
                                 }

@@ -97,12 +97,16 @@
     position: fixed;
     top: 125px;
     width: fit-content;
+
+    img {
+      width: 250px;
+    }
     .detail {
       width: 300px;
       display: flex;
       flex-direction: column;
       .price {
-        font-size: 50px;
+        font-size: 40px;
         font-weight: 700;
       }
       div {
@@ -132,9 +136,7 @@
         }
       }
     }
-    img {
-      width: 320px;
-    }
+    
     input {
       padding: 5px 10px;
       background-color: #2e3249;

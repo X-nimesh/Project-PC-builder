@@ -7,5 +7,6 @@
                 <li class="users"><a href="users.php">Users</a></li>
                 <li class="vendors"><a href="vendors.php">Vendors</a></li>
                 <li class="setting"><a href="adminSetting.php">Admin</a></li>
+                <li><div id="btn-main" class="loginB vendorLO"><a href="../server/logOut.php" id="btntxt">Log Out</a></div></li>
             </ul>
         </div>

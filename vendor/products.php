@@ -14,7 +14,6 @@
 </head>
 <body class="products">
    <div class="bodyV">
-   <div class="bodyV">
         <?php
             include "vendorNavBar.php";
         ?>

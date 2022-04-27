@@ -2,6 +2,7 @@ body.Ahome .Home,
 body.Aproducts .products,
 body.Aorders .orders,
 body.Ausers .users,
+body.Avendors .vendors,
 body.Aprofile .profile {
   // background-color: rgb(255, 255, 255);
   border-right: 10px solid #2952e3;
@@ -13,6 +14,7 @@ body.Ahome,
 body.Aproducts,
 body.Aorders,
 body.Ausers,
+body.Avendors,
 body.Aprofile {
   background: radial-gradient(circle, rgb(0, 85, 102) 12%, rgb(3, 0, 47) 100%);
   * {
@@ -70,7 +72,7 @@ body.Aprofile {
     margin-top: 40px;
     // position: static;
     margin-left: 25vw;
-    height: 200vh;
+    height: 100vh;
     .productsEnlisted {
       margin-top: 40px;
       .productsAdmin {
