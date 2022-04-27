@@ -2,11 +2,16 @@ body.dashboard .dashboard,
 body.products .products,
 body.orders .orders,
 body.profile .profile {
+ 
   // background-color: rgb(255, 255, 255);
   border-right: 10px solid #2952e3;
   a {
     color: #94abff;
   }
+  // &:hover{
+  //   transition:  4s;
+  //   background-color: #0606d8;
+  // }
 }
 .vendorLO {
   background-color: red !important;

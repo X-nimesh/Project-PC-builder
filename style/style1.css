@@ -1291,6 +1291,43 @@ table tbody tr td {
   box-shadow: 0 0 0 black;
 }
 
+.profileV {
+  margin-left: auto;
+  width: 80vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4158d0;
+  background-image: linear-gradient(45deg, #304091 0%, #8f3a89 46%, #bd9752 100%);
+}
+.profileV .vendorProfile {
+  width: 30vw;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  height: 400px;
+  background-color: black;
+  text-align: center;
+  border-radius: 50px;
+}
+.profileV .vendorProfile * {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Helvetica;
+}
+.profileV .vendorProfile .details {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.profileV .vendorProfile img {
+  width: 150px;
+  margin-top: -70px;
+}
+
 .adminbg {
   background: rgb(0, 85, 102);
   background: radial-gradient(circle, rgb(0, 85, 102) 12%, rgb(3, 0, 47) 100%);
@@ -1457,43 +1494,6 @@ body.Aprofile * {
 .bodyA .mainA .productsEnlisted .productsAdmin .categoryH li p {
   margin-right: 20px;
   font-weight: 600;
-}
-
-.profileV {
-  margin-left: auto;
-  width: 80vw;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #4158d0;
-  background-image: linear-gradient(45deg, #304091 0%, #8f3a89 46%, #bd9752 100%);
-}
-.profileV .vendorProfile {
-  width: 30vw;
-  min-height: -webkit-fit-content;
-  min-height: -moz-fit-content;
-  min-height: fit-content;
-  height: 400px;
-  background-color: black;
-  text-align: center;
-  border-radius: 50px;
-}
-.profileV .vendorProfile * {
-  color: white;
-  font-size: 20px;
-  font-weight: 500;
-  font-family: Helvetica;
-}
-.profileV .vendorProfile .details {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.profileV .vendorProfile img {
-  width: 150px;
-  margin-top: -70px;
 }
 
 .top-msg {
