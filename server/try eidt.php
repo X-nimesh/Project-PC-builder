@@ -1,4 +1,4 @@
-
+<?php
 $sql="SELECT * FROM $cat WHERE $idtype =$id";
 $res = mysqli_query($conn,$sql);
 
@@ -28,3 +28,4 @@ if(mysqli_num_rows($res)>0){
     <?php
     }
     }
+    ?>

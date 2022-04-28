@@ -6,24 +6,24 @@ session_start();
 include "conn.php";
 
 // $cpucomp=$_POST['CPUcompany'];
-$cpuid=$_POST['CPUmodel'];
-$ramid=$_POST['RAMmodel'];
-$gpuid=$_POST['GPUmodel'];
-$psuid=$_POST['PSUmodel'];
-$mid=$_POST['Mmodel'];
-$stid=$_POST['Stmodel'];
 $uid=$_SESSION['uid'];
-print_r( $_POST);
-$totalPrice=0;
-$date= getdate(date("U"))[0];
+
 // echo $pass;
 if(empty($uid)){
     echo "Please login first";
     header("Location: ../LoginPage.php");
 }
 
-if(!empty($cpuid) && !empty($ramid) && !empty($gpuid) && !empty($psuid) && !empty($mid) && !empty($stid)){
-
+if(!empty($_POST['CPUmodel']) && !empty($_POST['RAMmodel']) && !empty($_POST['GPUmodel']) && !empty($_POST['PSUmodel']) && !empty($_POST['Mmodel']) && !empty($_POST['Stmodel'])){
+    $cpuid=$_POST['CPUmodel'];
+    $ramid=$_POST['RAMmodel'];
+    $gpuid=$_POST['GPUmodel'];
+    $psuid=$_POST['PSUmodel'];
+    $mid=$_POST['Mmodel'];
+    $stid=$_POST['Stmodel'];
+    print_r( $_POST);
+    $totalPrice=0;
+    $date= getdate(date("U"))[0];
     // totalprice
         $sql="SELECT * FROM cpu WHERE cpuId='$cpuid';";
         $res= mysqli_query($conn,$sql);
@@ -146,6 +146,8 @@ if(!empty($cpuid) && !empty($ramid) && !empty($gpuid) && !empty($psuid) && !empt
     // 
 }
 else{
+    header('location:../pcbuilder.php?fail=true');//redirect to form
+
     die( "Please fill all the fields");
 }
 ?>

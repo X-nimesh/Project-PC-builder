@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
+    <title>Pc Builder Vendor</title>
     <link rel="stylesheet" href="../style/style1.css">
 </head>
 <body class="Avendors">
@@ -22,7 +22,7 @@
                 <div class="top">
                     <div class="welcome">
                         <h1 style="text-transform:capitalize;">Hello <?php echo $_SESSION['name'];?> </h1>
-                        <h3>Welcome to the vendor page!</h3>
+                        <h3>Welcome to the Admin page!</h3>
                     </div>
                 
                   
@@ -31,7 +31,7 @@
                        
                         <div class="cpu table">
 
-                            <h2>CPU</h2>
+                            <h2>Admin</h2>
                             <table border="1">
                                 <thead>
                                     <tr>
@@ -39,15 +39,16 @@
                                         <td> Name</td>
                                         <td> Address</td>
                                         <td> Contact</td>
-                                        <td> E-mail/td>
+                                        <td> E-mail</td>
+                                        <td> Action</td>
                                        
                                     </tr>
                                 </thead>
                             <tr>
                             <?php
                                 include "../conn.php";    
-                                $id=$_SESSION['vid'];
-                                $sql="SELECT  * FROM vendor ";
+                         
+                                $sql="SELECT * FROM vendor ";
                                 $res= mysqli_query($conn,$sql);
                                 if(mysqli_num_rows($res)>0){
                                     while($row=mysqli_fetch_assoc($res)){
@@ -78,5 +79,7 @@
                 </div>
          </div>
     </div>
+    <script src="../script.js"></script>
+
 </body>
 </html>

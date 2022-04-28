@@ -17,6 +17,19 @@
     <div class="bg1">
        <?php
         include "menu.php";
+
+         if(!empty($_GET)){
+            echo "<div id='top-msg'  class='top-msg'>";
+            if(!empty($_GET['fail'])){
+                ?>
+                <div class="successh" role="alert">
+                    Plz fill up all the field
+                </div>
+                <?php
+                }
+            echo "</div>";
+
+            }
         ?>
 
     <div class="body">

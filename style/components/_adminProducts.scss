@@ -1,19 +1,23 @@
 $tBorderC: rgb(135, 229, 255);
-.mainTableA table {
+.mainTableA{
+padding: 50px 0;
+ table {
     margin-bottom: 30px;
     margin-top: 5px;
     border-collapse: collapse;
     border: $tBorderC 2px solid;
-    width: 70vw;
+    width: 75vw;
     thead {
         border: $tBorderC 2px solid;
     }
     tr td {
       height: 30px !important;
       text-align: center;
+      min-width:fit-content ;
     }
     tbody tr td {
       text-align: center;
-      height: 40px !important;
+      height: 80px !important;
     }
   }
+}

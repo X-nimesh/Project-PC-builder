@@ -44,7 +44,6 @@
                             <tr>
                             <?php
                                 include "../conn.php";    
-                                $id=$_SESSION['vid'];
                                 $sql="SELECT  * FROM cpu ";
                                 $res= mysqli_query($conn,$sql);
                                 if(mysqli_num_rows($res)>0){
@@ -176,7 +175,6 @@
                                 </thead>
                             <tr>
                             <?php
-                                $id=$_SESSION['vid'];
                                 $sql="SELECT  * FROM ram ";
                                 $res= mysqli_query($conn,$sql);
                                 // echo $id;
@@ -221,7 +219,6 @@
                                 </thead>
                             <tr>
                             <?php
-                                $id=$_SESSION['vid'];
                                 $sql="SELECT * FROM storage ";
                                 $res= mysqli_query($conn,$sql);
                                 // echo $id;
@@ -266,7 +263,6 @@
                                 </thead>
                             <tr>
                             <?php
-                                $id=$_SESSION['vid'];
                                 $sql="SELECT * FROM psu ";
                                 $res= mysqli_query($conn,$sql);
                                 // echo $id;

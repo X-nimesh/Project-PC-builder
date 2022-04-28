@@ -48,6 +48,13 @@
                 </div>
             <?php
             }
+            if(!empty($_GET['lout'])){
+                ?>
+                <div class="failh" role="alert">
+                 Logged out
+                </div>
+            <?php
+            }
             echo "</div>";
         }
     ?>

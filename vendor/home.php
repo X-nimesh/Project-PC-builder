@@ -18,7 +18,7 @@
             include "vendorNavBar.php";
         ?>
         <div class="mainV">
-            <h1>Hello Vendor!</h1>
+        <h1 style="text-transform:capitalize;">Hello <?php echo $_SESSION['Name'];?> </h1>
             <p>Welcome to the vendor page!</p>
             <div class="productsEnlisted">
                 <h1>Product Enlisted</h1>

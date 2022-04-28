@@ -13,7 +13,27 @@
     <link rel="stylesheet" href="../style/style1.css">
 </head>
 <body class="Ausers">
-
+<?php
+        if(!empty($_GET)){
+            echo "<div id='top-msg'  class='top-msg'>";
+            if(!empty($_GET['update'])){
+                ?>
+                <div class="successh" role="alert">
+                Updated Successfully
+                </div>
+            <?php
+            }
+            if(!empty($_GET['delete'])){
+                ?>
+                <div class="errorh" role="alert">
+                Deleted Successfully
+                </div>
+            <?php
+            
+            }
+            echo "</div>";
+        }
+    ?>
    <div class="bodyA">
         <?php
             include "adminNavbar.php";
@@ -41,6 +61,7 @@
                                         <td> Contact</td>
                                         <td> E-mail/td>
                                         <td>Uname</td>
+                                        <td>Action</td>
                                     </tr>
                                 </thead>
                             <tr>
@@ -56,12 +77,11 @@
                                             echo "<td>".$row['address']."</td>"; 
                                             echo "<td>".$row['contact']."</td>"; 
                                             echo "<td>".$row['email']."</td>"; 
-                                            echo "<td>".$row['password']."</td>"; 
                                             echo "<td>".$row['uname']."</td>"; 
                                             echo "<td ><a class='btn-edit' 
-                                                href='../server/vendorEdit.php?id=".$row['id']."&typ=cpu&idType=cpuId'>Edit</a>||
+                                                href='../server/userEdit.php?id=".$row['id']."'>Edit</a>||
                                                 <a class='btn-delete' 
-                                                href='../server/delete.php?id=".$row['id']."&typ=cpu&idType=cpuId'>Delete</a></td>";
+                                                href='../server/deleteUser.php?id=".$row['id']."'>Delete</a></td>";
                                             echo "</tr>";
                                         }  
                                     }
@@ -78,5 +98,7 @@
                 </div>
          </div>
     </div>
+    <script src="../script.js"></script>
+
 </body>
 </html>

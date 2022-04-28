@@ -17,9 +17,5 @@ include './conn.php';
         header('location:../LoginPage.php?success=true');//redirect to form
         echo '<script>alert("Signup Successful");</script>';
         }
-
     }
-
-        
-
 ?>
