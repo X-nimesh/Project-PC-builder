@@ -35,7 +35,8 @@ if(mysqli_num_rows($res)==1){
     header('location:../index.php?success=true');//redirect to form' 
 }
 else{
-    die("unable to login".mysqli_error($conn));
+    // die("unable to login".mysqli_error($conn));
+    header('location:../LoginPage.php?failed=true');//redirect to form' 
     
 }
 ?>

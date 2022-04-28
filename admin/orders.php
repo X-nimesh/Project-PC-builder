@@ -63,9 +63,9 @@
                                         echo "<td>".$row['quantity']."</td>"; 
                                         echo "<td>$".$row['price']."</td>"; 
                                         echo "<td ><a class='btn-edit' 
-                                            href='../server/vendorEdit.php?id=".$row['cpuId']."&typ=cpu&idType=cpuId'>Edit</a>||
-                                            <a class='btn-delete' 
-                                            href='../server/delete.php?id=".$row['cpuId']."&typ=cpu&idType=cpuId'>Delete</a></td>";
+                                                href='../server/vendorEdit.php?id=".$row['cpuId']."&typ=cpu&idType=cpuId'>Edit</a>||
+                                                <a class='btn-delete' 
+                                                href='../server/delete.php?id=".$row['cpuId']."&typ=cpu&idType=cpuId'>Delete</a></td>";
                                         echo "</tr>";
                                     }  
                                 }

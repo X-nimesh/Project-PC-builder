@@ -164,9 +164,9 @@ body {
 
 .bg1 {
   /* height: 1080px; */
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
   min-height: 100vh;
   width: 100%;
   background-color: #0f0e13;

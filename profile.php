@@ -1,6 +1,11 @@
 
 <?php
+   
     session_start();
+if(!isset($_SESSION['uid'])) {
+    header("Location: index.php?fail=true");
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -77,8 +82,8 @@
     
 
     <script >
-        // let logged_in='<?php echo $_SESSION['uname']; ?>';
-        // console.log(logged_in);
+        let logged_in=<?php echo isset($_SESSION['uname'])?>;
+        console.log(logged_in);
         let profile=document.getElementById('nav');
         
         let signup = document.getElementById("signupB");
@@ -93,6 +98,10 @@
 
 
                document.getElementById('btn-main').style.backgroundColor = "red";
+        }
+        if(!<?php echo isset($_SESSION['uname']);?>){
+        
+            location.href = 'index.php';
         }
             
 

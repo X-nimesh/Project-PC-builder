@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="../style/style1.css">
 </head>
 <body class="Aproducts">
-
    <div class="bodyA">
         <?php
             include "adminNavbar.php";

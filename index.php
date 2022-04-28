@@ -41,10 +41,10 @@
                 </div>
             <?php
             }
-            if(!empty($_GET['lout'])){
+            if(!empty($_GET['fail'])){
                 ?>
-                <div class="logouth" role="alert">
-                Logged Out Successfully
+                <div class="failh" role="alert">
+                 Please login in
                 </div>
             <?php
             }
@@ -162,6 +162,7 @@
 
                document.getElementById('btn-main').style.backgroundColor = "red";
         }
+    
         
     </script>
 

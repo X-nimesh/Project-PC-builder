@@ -3,7 +3,7 @@ body {
 }
 .bg1 {
   /* height: 1080px; */
-  height: fit-content;
+  max-height: fit-content;
   min-height: 100vh;
   width: 100%;
   background-color: #0f0e13;
